@@ -1,14 +1,10 @@
 # 👋 Olá, eu sou Pablo Vinicius
 
-💻 Desenvolvedor focado em Backend e APIs REST modernas.
+## Backend Software Engineer
 
-Atualmente desenvolvendo projetos relacionados a:
-- Backend Development
-- APIs REST
-- Autenticação JWT
-- Integração com APIs
-- Bancos de Dados
-- Arquitetura Backend
+Desenvolvedor focado em backend, APIs REST e construção de aplicações modernas, performáticas e escaláveis.
+
+Atualmente estudando Engenharia de Software e aprofundando conhecimentos em arquitetura backend, autenticação JWT, integração com APIs e bancos de dados.
 
 ---
 
@@ -16,7 +12,7 @@ Atualmente desenvolvendo projetos relacionados a:
 
 <div align="left">
 
-<img src="https://skillicons.dev/icons?i=python,fastapi,sqlite,git,github,vscode" />
+<img src="https://skillicons.dev/icons?i=python,fastapi,flask" />
 
 </div>
 
@@ -25,20 +21,22 @@ Atualmente desenvolvendo projetos relacionados a:
 # 📌 Projetos em Destaque
 
 ## 🚚 Delivery API
-API REST com autenticação JWT e geração de access/refresh tokens.
+
+API REST com autenticação JWT, geração de access/refresh tokens e documentação automática utilizando FastAPI.
 
 🔗 https://github.com/Prabovn7/delivery-api-fastapi
 
 ---
 
 ## 🌦️ API de Clima
-Aplicação CLI para consulta de dados climáticos em tempo real utilizando integração com API externa.
+
+Aplicação CLI para consulta de condições climáticas em tempo real utilizando integração com API externa.
 
 🔗 https://github.com/Prabovn7/api-clima
 
 ---
 
-# 📈 Estatísticas GitHub
+# 📈 GitHub Stats
 
 <div align="left">
 
@@ -53,10 +51,10 @@ Aplicação CLI para consulta de dados climáticos em tempo real utilizando inte
 # 📚 Atualmente Aprendendo
 
 - Arquitetura Backend
+- APIs REST
 - PostgreSQL
 - Docker
 - SQLAlchemy
-- Deploy de APIs
 - Microsserviços
 
 ---
@@ -70,4 +68,4 @@ Aplicação CLI para consulta de dados climáticos em tempo real utilizando inte
 
 # ⚡ Objetivo
 
-Construir aplicações backend modernas, performáticas e escaláveis.
+Construir aplicações backend modernas, seguras e escaláveis.
