@@ -1,36 +1,36 @@
-# 👋 Olá, eu sou Pablo Vinicius
+# 👋 Hi, I'm Pablo Vinicius
 
 ## Backend Software Engineer
 
-Desenvolvedor focado em backend, APIs REST e construção de aplicações modernas, performáticas e escaláveis.
+Backend-focused developer passionate about software architecture and building modern, scalable and high-performance applications.
 
-Atualmente estudando Engenharia de Software e aprofundando conhecimentos em arquitetura backend, autenticação JWT, integração com APIs e bancos de dados.
+Currently studying Software Engineering and deepening my knowledge in backend development, authentication, databases and distributed systems.
 
 ---
 
-# 💻 Linguagens & Frameworks
+# 💻 Languages & Frameworks
 
 <div align="left">
 
-<img src="https://skillicons.dev/icons?i=python,java,javascript,fastapi,flask,nodejs" />
+<img src="https://skillicons.dev/icons?i=python,java,javascript,typescript,fastapi,flask,nodejs,spring" />
 
 </div>
 
 ---
 
-# 📌 Projetos em Destaque
+# 📌 Featured Projects
 
 ## 🚚 Delivery API
 
-API REST com autenticação JWT, geração de access/refresh tokens e documentação automática utilizando FastAPI.
+REST API with JWT authentication, access/refresh token generation and automatic documentation built with FastAPI.
 
 🔗 https://github.com/Prabovn7/delivery-api-fastapi
 
 ---
 
-## 🌦️ API de Clima
+## 🌦️ Weather API
 
-Aplicação CLI para consulta de condições climáticas em tempo real utilizando integração com API externa.
+CLI application for real-time weather data using external API integration.
 
 🔗 https://github.com/Prabovn7/api-clima
 
@@ -40,30 +40,32 @@ Aplicação CLI para consulta de condições climáticas em tempo real utilizand
 
 <div align="left">
 
-<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Prabovn7&theme=tokyonight"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Prabovn7&show_icons=true&theme=tokyonight&border_radius=10"/>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Prabovn7&layout=compact&theme=tokyonight&border_radius=10"/>
 
 </div>
 
 ---
 
-# 📚 Atualmente Aprendendo
+# 📚 Currently Learning
 
-- Arquitetura Backend
-- APIs REST
+- Backend Architecture
 - PostgreSQL
 - Docker
 - SQLAlchemy
-- Microsserviços
+- Microservices
+- Clean Architecture
 
 ---
 
-# 📫 Contato
+# 📫 Contact
 
 - LinkedIn: https://linkedin.com/in/pablov-santos-dev
 - GitHub: https://github.com/Prabovn7
 
 ---
 
-# ⚡ Objetivo
+# ⚡ Goal
 
-Construir aplicações backend modernas, seguras e escaláveis.
+Build modern, secure, scalable and high-performance backend applications.
