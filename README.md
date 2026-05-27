@@ -8,11 +8,11 @@ Atualmente estudando Engenharia de Software e aprofundando conhecimentos em arqu
 
 ---
 
-# 🚀 Tecnologias
+# 💻 Linguagens & Frameworks
 
 <div align="left">
 
-<img src="https://skillicons.dev/icons?i=python,fastapi,flask" />
+<img src="https://skillicons.dev/icons?i=python,java,javascript,fastapi,flask,nodejs" />
 
 </div>
 
@@ -36,13 +36,11 @@ Aplicação CLI para consulta de condições climáticas em tempo real utilizand
 
 ---
 
-# 📈 GitHub Stats
+# 📊 GitHub Stats
 
 <div align="left">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Prabovn7&show_icons=true&theme=tokyonight"/>
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Prabovn7&layout=compact&theme=tokyonight"/>
+<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Prabovn7&theme=tokyonight"/>
 
 </div>
 
