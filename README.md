@@ -33,7 +33,7 @@ Currently studying **Software Engineering** and improving my skills in backend d
 
 ### Languages
 
-<img src="https://skillicons.dev/icons?i=python,java,javascript,typescript" height="46" />
+<img src="https://skillicons.dev/icons?i=python,java,c,javascript,typescript" height="46" />
 
 <br><br>
 
