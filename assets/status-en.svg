@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 28" role="img" aria-label="Open to junior and internship backend opportunities">
+  <style>
+    .t { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; fill: #8B949E; }
+    .dot { fill: #7C9CBF; }
+    .ring { fill: none; stroke: #7C9CBF; stroke-width: 1.5; transform-origin: 10px 14px; animation: pulse 2s ease-out infinite; }
+    @keyframes pulse {
+      0%   { transform: scale(1);   opacity: .7; }
+      100% { transform: scale(2.6); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { .ring { animation: none; opacity: 0; } }
+  </style>
+  <circle class="ring" cx="10" cy="14" r="4"/>
+  <circle class="dot" cx="10" cy="14" r="4"/>
+  <text class="t" x="28" y="19">Open to junior and internship backend opportunities</text>
+</svg>

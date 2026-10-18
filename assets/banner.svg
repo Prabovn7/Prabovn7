@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" role="img" aria-labelledby="t d">
+  <title id="t">Pablo Vinicius, Software Engineering Student focused on backend</title>
+  <desc id="d">Banner showing the name and role next to a JSON API response describing focus, language, framework and current project. The response lines appear one after another.</desc>
+  <style>
+    .sans { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; font-size: 15px; }
+    .k { fill: #7C9CBF; }
+    .s { fill: #C9D1D9; }
+    .p { fill: #6E7681; }
+
+    .l { animation: line .45s ease-out both; }
+    .d1 { animation-delay: .4s; }
+    .d2 { animation-delay: .8s; }
+    .d3 { animation-delay: 1.15s; }
+    .d4 { animation-delay: 1.5s; }
+    .d5 { animation-delay: 1.85s; }
+    .d6 { animation-delay: 2.2s; }
+    .d7 { animation-delay: 2.55s; }
+    @keyframes line {
+      from { opacity: 0; transform: translateX(-8px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .caret { fill: #7C9CBF; opacity: 0; animation: blink 1.1s steps(1) 3s infinite; }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .l { animation: none; }
+      .caret { animation: none; opacity: 1; }
+    }
+  </style>
+
+  <rect x="1" y="1" width="998" height="278" rx="14" fill="#0F1216" stroke="#1C2128" stroke-width="2"/>
+
+  <text class="sans" x="56" y="138" font-size="58" font-weight="700" letter-spacing="-1.5" fill="#F0F3F6">Pablo Vinicius</text>
+  <text class="sans" x="58" y="182" font-size="22" font-weight="500" fill="#C9D1D9">Software Engineering Student</text>
+  <text class="sans" x="58" y="212" font-size="16" fill="#6E7681">Backend development and APIs</text>
+
+  <rect x="560" y="28" width="392" height="224" rx="10" fill="#161B22" stroke="#1C2128" stroke-width="1.5"/>
+  <text class="mono k l d1" x="584" y="62">HTTP/1.1 200 OK</text>
+  <text class="mono p l d2" x="584" y="92">{</text>
+  <text class="mono l d3" x="608" y="118"><tspan class="k">"focus"</tspan><tspan class="p">: </tspan><tspan class="s">"backend"</tspan><tspan class="p">,</tspan></text>
+  <text class="mono l d4" x="608" y="142"><tspan class="k">"language"</tspan><tspan class="p">: </tspan><tspan class="s">"python"</tspan><tspan class="p">,</tspan></text>
+  <text class="mono l d5" x="608" y="166"><tspan class="k">"framework"</tspan><tspan class="p">: </tspan><tspan class="s">"fastapi"</tspan><tspan class="p">,</tspan></text>
+  <text class="mono l d6" x="608" y="190"><tspan class="k">"building"</tspan><tspan class="p">: </tspan><tspan class="s">"bus-ticket-api"</tspan><tspan class="p">,</tspan></text>
+  <text class="mono l d7" x="608" y="214"><tspan class="k">"open_to"</tspan><tspan class="p">: </tspan><tspan class="s">"junior roles"</tspan></text>
+  <text class="mono p l d7" x="584" y="238" style="animation-delay:2.9s">}</text>
+  <rect class="caret" x="598" y="226" width="9" height="16"/>
+</svg>
