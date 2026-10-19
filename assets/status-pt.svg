@@ -1,15 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 28" role="img" aria-label="Aberto a oportunidades de estágio e vaga júnior em backend">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 40" role="img" aria-label="Aberto a vagas de estágio e júnior em backend">
   <style>
-    .t { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; fill: #8B949E; }
+    .t { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; fill: #C9D1D9; }
     .dot { fill: #7C9CBF; }
-    .ring { fill: none; stroke: #7C9CBF; stroke-width: 1.5; transform-origin: 10px 14px; animation: pulse 2s ease-out infinite; }
+    .ring { fill: none; stroke: #7C9CBF; stroke-width: 1.5; transform-origin: 22px 20px; animation: pulse 2s ease-out infinite; }
     @keyframes pulse {
       0%   { transform: scale(1);   opacity: .7; }
       100% { transform: scale(2.6); opacity: 0; }
     }
     @media (prefers-reduced-motion: reduce) { .ring { animation: none; opacity: 0; } }
   </style>
-  <circle class="ring" cx="10" cy="14" r="4"/>
-  <circle class="dot" cx="10" cy="14" r="4"/>
-  <text class="t" x="28" y="19">Aberto a oportunidades de estágio e vaga júnior em backend</text>
+  <rect x="1" y="1" width="398" height="38" rx="19" fill="#0F1216" stroke="#1C2128" stroke-width="2"/>
+  <circle class="ring" cx="22" cy="20" r="4"/>
+  <circle class="dot" cx="22" cy="20" r="4"/>
+  <text class="t" x="40" y="25">Aberto a vagas de estágio e júnior em backend</text>
 </svg>
