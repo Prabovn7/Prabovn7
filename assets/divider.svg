@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 40" width="100%" role="presentation" aria-hidden="true">
+<line x1="40" y1="20" x2="860" y2="20" stroke="#7C9CBF" stroke-opacity=".3" stroke-width="1.2"/>
+<circle cx="40" cy="20" r="3" fill="#7C9CBF" fill-opacity=".6"/><circle cx="860" cy="20" r="3" fill="#7C9CBF" fill-opacity=".6"/>
+<polygon points="450,12 458,20 450,28 442,20" fill="#0F1216" stroke="#7C9CBF" stroke-width="1.4"/>
+<circle r="3.4" cy="20" fill="#7C9CBF"><animate attributeName="cx" values="40;860" dur="4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="4.5s" repeatCount="indefinite"/></circle>
+</svg>

@@ -1,16 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 40" role="img" aria-label="Open to junior and internship backend roles">
-  <style>
-    .t { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; fill: #C9D1D9; }
-    .dot { fill: #7C9CBF; }
-    .ring { fill: none; stroke: #7C9CBF; stroke-width: 1.5; transform-origin: 22px 20px; animation: pulse 2s ease-out infinite; }
-    @keyframes pulse {
-      0%   { transform: scale(1);   opacity: .7; }
-      100% { transform: scale(2.6); opacity: 0; }
-    }
-    @media (prefers-reduced-motion: reduce) { .ring { animation: none; opacity: 0; } }
-  </style>
-  <rect x="1" y="1" width="398" height="38" rx="19" fill="#0F1216" stroke="#1C2128" stroke-width="2"/>
-  <circle class="ring" cx="22" cy="20" r="4"/>
-  <circle class="dot" cx="22" cy="20" r="4"/>
-  <text class="t" x="40" y="25">Open to junior and internship backend roles</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 64" width="100%" style="max-width:720px" role="img" aria-label="Open to junior and internship backend opportunities">
+<rect x=".75" y=".75" width="718.5" height="62.5" rx="31.25" fill="#0F1216" stroke="#7C9CBF" stroke-opacity=".5" stroke-width="1.5"/>
+<circle cx="36" cy="32" r="6" fill="#7C9CBF"><animate attributeName="opacity" values="1;.35;1" dur="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="36" cy="32" r="6" fill="none" stroke="#7C9CBF" stroke-width="1.5"><animate attributeName="r" values="6;16" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="1.8s" repeatCount="indefinite"/></circle>
+<text x="62" y="39" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" fill="#E6EDF3">Open to junior and internship backend opportunities</text>
 </svg>
