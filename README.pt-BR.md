@@ -2,7 +2,7 @@
 
 <img src="assets/banner.svg" alt="Pablo Santos, estudante de Engenharia de Software com foco em backend" width="100%" />
 
-<a href="https://linkedin.com/in/pablov-santos-dev"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://linkedin.com/in/pablov-santos-dev"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQuNSA5aDMuMnYxMC41SDQuNXpNNi4xIDRhMS45IDEuOSAwIDEgMSAwIDMuOCAxLjkgMS45IDAgMCAxIDAtMy44ek0xMCA5aDN2MS41Yy41LS45IDEuNy0xLjggMy40LTEuOCAzLjIgMCAzLjkgMi4xIDMuOSA0Ljl2NS45aC0zLjJ2LTUuMmMwLTEuMyAwLTIuOS0xLjgtMi45cy0yIDEuNC0yIDIuOHY1LjNIMTB6Ii8%2BPC9zdmc%2B" alt="LinkedIn" /></a>
 <a href="https://github.com/Prabovn7"><img src="https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 
 <a href="#projetos"><img src="assets/icons/projects.svg" width="18" align="top" alt="" /> Projetos</a> ·
@@ -121,7 +121,7 @@ Estudante de Engenharia de Software. Antes de migrar para backend, passei três 
 
 ## <img src="assets/icons/contact.svg" width="28" align="top" alt="" /> Contato
 
-<a href="https://linkedin.com/in/pablov-santos-dev"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://linkedin.com/in/pablov-santos-dev"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQuNSA5aDMuMnYxMC41SDQuNXpNNi4xIDRhMS45IDEuOSAwIDEgMSAwIDMuOCAxLjkgMS45IDAgMCAxIDAtMy44ek0xMCA5aDN2MS41Yy41LS45IDEuNy0xLjggMy40LTEuOCAzLjIgMCAzLjkgMi4xIDMuOSA0Ljl2NS45aC0zLjJ2LTUuMmMwLTEuMyAwLTIuOS0xLjgtMi45cy0yIDEuNC0yIDIuOHY1LjNIMTB6Ii8%2BPC9zdmc%2B" alt="LinkedIn" /></a>
 <a href="https://github.com/Prabovn7"><img src="https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 
 <div align="center">
