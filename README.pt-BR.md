@@ -2,7 +2,15 @@
 
 <img src="assets/banner.svg" alt="Pablo Santos, estudante de Engenharia de Software com foco em backend" width="100%" />
 
-<a href="#projetos">Projetos</a> · <a href="#stack">Stack</a> · <a href="#estatisticas">Estatísticas</a> · <a href="#formacao">Formação</a> · <a href="#contato">Contato</a> · <a href="README.md">English</a>
+<a href="https://linkedin.com/in/pablov-santos-dev"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://github.com/Prabovn7"><img src="https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+
+<a href="#projetos"><img src="assets/icons/projects.svg" width="18" align="top" alt="" /> Projetos</a> ·
+<a href="#stack"><img src="assets/icons/stack.svg" width="18" align="top" alt="" /> Stack</a> ·
+<a href="#estatisticas"><img src="assets/icons/stats.svg" width="18" align="top" alt="" /> Estatísticas</a> ·
+<a href="#formacao"><img src="assets/icons/background.svg" width="18" align="top" alt="" /> Formação</a> ·
+<a href="#contato"><img src="assets/icons/contact.svg" width="18" align="top" alt="" /> Contato</a> ·
+<a href="README.md">English</a>
 
 <br />
 
@@ -20,33 +28,35 @@
 
 Estudante de Engenharia de Software com foco em backend, construindo APIs com autenticação, persistência de dados e testes automatizados. Agora estou trabalhando em reservas seguras sob concorrência com PostgreSQL e Redis, e em containerizar meus projetos com Docker.
 
+<img src="assets/icons/pin.svg" width="16" align="top" alt="" /> Itapevi, São Paulo, Brasil
+
 <div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
 
 <a id="projetos"></a>
 
 ## <img src="assets/icons/projects.svg" width="28" align="top" alt="" /> Projetos
 
-**[Bus Ticket API](https://github.com/Prabovn7/bus-ticket-api)** · `em andamento`
+### <img src="assets/icons/bus.svg" width="22" align="top" alt="" /> [Bus Ticket API](https://github.com/Prabovn7/bus-ticket-api) · `em andamento`
 Venda de passagens de ônibus com reserva de assentos por trecho, feita para que requisições concorrentes nunca vendam o mesmo assento duas vezes.
 <br />
 <img src="https://skillicons.dev/icons?i=python,fastapi,postgres,redis,docker&theme=dark" height="34" alt="Python, FastAPI, PostgreSQL, Redis, Docker" />
 
-**[Delivery API](https://github.com/Prabovn7/delivery-api-fastapi)**
+### <img src="assets/icons/truck.svg" width="22" align="top" alt="" /> [Delivery API](https://github.com/Prabovn7/delivery-api-fastapi)
 Serviço FastAPI com autenticação JWT (access e refresh tokens) e gerenciamento de pedidos. SQLAlchemy, estrutura em camadas e testes automatizados.
 <br />
 <img src="https://skillicons.dev/icons?i=python,fastapi,sqlite&theme=dark" height="34" alt="Python, FastAPI, SQLite" />
 
-**[Ferramenta de Tracking](https://github.com/Prabovn7/Ferramenta-de-tracking)**
+### <img src="assets/icons/table.svg" width="22" align="top" alt="" /> [Ferramenta de Tracking](https://github.com/Prabovn7/Ferramenta-de-tracking)
 Ferramenta em Python que distribui cases de forma equilibrada e acompanha tudo em Excel, com dashboard gerencial e geração de relatórios.
 <br />
 <img src="https://skillicons.dev/icons?i=python&theme=dark" height="34" alt="Python" /> `openpyxl` `Excel`
 
-**[Weather CLI](https://github.com/Prabovn7/api-clima)**
+### <img src="assets/icons/weather.svg" width="22" align="top" alt="" /> [Weather CLI](https://github.com/Prabovn7/api-clima)
 Aplicação de linha de comando que lê dados climáticos em tempo real da WeatherAPI.
 <br />
 <img src="https://skillicons.dev/icons?i=python&theme=dark" height="34" alt="Python" />
 
-Também: [rpg-python](https://github.com/Prabovn7/rpg-python), exercício de abstração em POO.
+<img src="assets/icons/game.svg" width="18" align="top" alt="" /> Também: [rpg-python](https://github.com/Prabovn7/rpg-python), exercício de abstração em POO.
 
 <div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
 
@@ -54,17 +64,31 @@ Também: [rpg-python](https://github.com/Prabovn7/rpg-python), exercício de abs
 
 ## <img src="assets/icons/stack.svg" width="28" align="top" alt="" /> Stack
 
-**Linguagens**
+**<img src="assets/icons/code.svg" width="20" align="top" alt="" /> Linguagens**
 <br />
-<img src="https://skillicons.dev/icons?i=python,java,c,js,ts&theme=dark" height="40" alt="Python, Java, C, JavaScript, TypeScript" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+<img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
 
-**Backend e dados**
+**<img src="assets/icons/server.svg" width="20" align="top" alt="" /> Backend e dados**
 <br />
-<img src="https://skillicons.dev/icons?i=fastapi,flask,spring,nodejs,postgres,sqlite,redis&theme=dark" height="40" alt="FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+<img src="https://img.shields.io/badge/Flask-3B3B3B?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
+<img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
 
-**Ferramentas**
+**<img src="assets/icons/tools.svg" width="20" align="top" alt="" /> Ferramentas**
 <br />
-<img src="https://skillicons.dev/icons?i=docker,git,github,githubactions,vscode&theme=dark" height="40" alt="Docker, Git, GitHub, GitHub Actions, VS Code" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+<img src="https://img.shields.io/badge/GitHub-24292F?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+<img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" />
 
 <div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
 
@@ -86,7 +110,10 @@ Estudante de Engenharia de Software. Antes de migrar para backend, passei três 
 
 ## <img src="assets/icons/next.svg" width="28" align="top" alt="" /> Próximos passos
 
-Controle de concorrência com PostgreSQL e Redis, Docker, CI com testes automatizados, segurança, arquitetura de software e inglês técnico.
+<img src="assets/icons/database.svg" width="18" align="top" alt="" /> Controle de concorrência com PostgreSQL e Redis<br />
+<img src="https://img.shields.io/badge/-2496ED?style=flat-square&logo=docker&logoColor=white" height="18" align="top" alt="" /> Docker e CI com testes automatizados<br />
+<img src="assets/icons/lock.svg" width="18" align="top" alt="" /> Segurança e arquitetura de software<br />
+<img src="assets/icons/code.svg" width="18" align="top" alt="" /> Inglês técnico
 
 <div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
 
@@ -94,5 +121,11 @@ Controle de concorrência com PostgreSQL e Redis, Docker, CI com testes automati
 
 ## <img src="assets/icons/contact.svg" width="28" align="top" alt="" /> Contato
 
-<a href="https://linkedin.com/in/pablov-santos-dev"><img src="https://img.shields.io/badge/LinkedIn-0F1216?style=for-the-badge&logo=linkedin&logoColor=7C9CBF" alt="LinkedIn" /></a>
-<a href="https://github.com/Prabovn7"><img src="https://img.shields.io/badge/GitHub-0F1216?style=for-the-badge&logo=github&logoColor=7C9CBF" alt="GitHub" /></a>
+<a href="https://linkedin.com/in/pablov-santos-dev"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://github.com/Prabovn7"><img src="https://img.shields.io/badge/GitHub-24292F?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+
+<div align="center">
+
+<img src="assets/icons/spider.svg" width="28" alt="" />
+
+</div>

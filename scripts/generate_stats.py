@@ -15,10 +15,16 @@ import sys
 import urllib.request
 from html import escape
 
-BG, ACC, FG, MUT, LINE = "#0F1216", "#7C9CBF", "#E6EDF3", "#9FB3C8", "#2A3441"
+BG, ACC, FG, MUT, LINE = "#050505", "#E6E6E6", "#FFFFFF", "#A3A3A3", "#2A2A2A"
 SANS = "system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 EXCLUDE = {"Mako", "Jinja", "Dockerfile", "Makefile"}
+# GitHub linguist colors, so each language is recognizable at a glance
+LANG_COLORS = {
+    "Python": "#3572A5", "TypeScript": "#3178C6", "JavaScript": "#F1E05A", "CSS": "#663399", "HTML": "#E34C26",
+    "Java": "#B07219", "C": "#9CA3AF", "Shell": "#89E051", "Batchfile": "#C1F12E", "VBA": "#867DB1", "SQL": "#E38C00",
+    "PLpgSQL": "#336790", "Go": "#00ADD8", "Rust": "#DEA584", "Other": "#6B7280",
+}
 TOP_N = 6
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "stats")
 
@@ -69,9 +75,10 @@ def languages_svg(langs):
         bar = max(track_w * pct / 100, 4)
         t0 = 0.2 + i * 0.12
         rows.append(
-            f'<text x="32" y="{y+6}" font-family="{SANS}" font-size="18" fill="{FG}">{escape(name)}</text>'
+            f'<circle cx="40" cy="{y}" r="6" fill="{LANG_COLORS.get(name, ACC)}"/>'
+            f'<text x="56" y="{y+6}" font-family="{SANS}" font-size="18" fill="{FG}">{escape(name)}</text>'
             f'<rect x="{track_x}" y="{y-6}" width="{track_w}" height="12" rx="6" fill="{LINE}"/>'
-            f'<rect x="{track_x}" y="{y-6}" width="{bar:.1f}" height="12" rx="6" fill="{ACC}">'
+            f'<rect x="{track_x}" y="{y-6}" width="{bar:.1f}" height="12" rx="6" fill="{LANG_COLORS.get(name, ACC)}">'
             f'<animate attributeName="width" values="0;0;{bar:.1f}" keyTimes="0;{t0/1.8:.3f};1" dur="1.8s" fill="freeze"/></rect>'
             f'<text x="868" y="{y+6}" text-anchor="end" font-family="{MONO}" font-size="16" fill="{MUT}">{pct:.1f}%</text>'
         )
@@ -97,7 +104,7 @@ def overview_svg(data):
         x = 30 + i * 215
         out.append(
             f'<g opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;{i*0.12:.2f};{i*0.12+0.3:.2f}" dur="1.4s" fill="freeze"/>'
-            f'<rect x="{x}" y="24" width="195" height="92" rx="12" fill="#0B0E11" stroke="{LINE}"/>'
+            f'<rect x="{x}" y="24" width="195" height="92" rx="12" fill="#141414" stroke="{LINE}"/>'
             f'<text x="{x+22}" y="70" font-family="{SANS}" font-size="38" font-weight="700" fill="{FG}">{escape(num)}</text>'
             f'<text x="{x+22}" y="98" font-family="{SANS}" font-size="15" fill="{MUT}">{escape(label)}</text></g>'
         )

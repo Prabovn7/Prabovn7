@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 40" width="100%" role="presentation" aria-hidden="true">
-<line x1="40" y1="20" x2="860" y2="20" stroke="#7C9CBF" stroke-opacity=".3" stroke-width="1.2"/>
-<circle cx="40" cy="20" r="3" fill="#7C9CBF" fill-opacity=".6"/><circle cx="860" cy="20" r="3" fill="#7C9CBF" fill-opacity=".6"/>
-<polygon points="450,12 458,20 450,28 442,20" fill="#0F1216" stroke="#7C9CBF" stroke-width="1.4"/>
-<circle r="3.4" cy="20" fill="#7C9CBF"><animate attributeName="cx" values="40;860" dur="4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="4.5s" repeatCount="indefinite"/></circle>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 44" width="100%" role="presentation" aria-hidden="true">
+<defs>
+<radialGradient id="vg" cx="50%" cy="50%" r="75%"><stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#050505"/></radialGradient>
+<linearGradient id="sw" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E6E6E6" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".16"/><stop offset="1" stop-color="#E6E6E6" stop-opacity="0"/></linearGradient>
+<filter id="gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="sc" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".28"/></pattern>
+</defs>
+<line x1="30" y1="22" x2="870" y2="22" stroke="#E6E6E6" stroke-opacity=".35" stroke-width="1.2"/>
+<polygon points="30,16 36,22 30,28 24,22" fill="#050505" stroke="#E6E6E6" stroke-width="1.4"/><polygon points="870,16 876,22 870,28 864,22" fill="#050505" stroke="#E6E6E6" stroke-width="1.4"/>
+<g transform="translate(30,22)"><g filter="url(#gl)"><animateMotion dur="7s" repeatCount="indefinite" rotate="auto" path="M0,0 L840,0"/><g transform="scale(0.85)"><g stroke="#E6E6E6" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,-2 7,-9 11,-12"/><polyline points="1,-2 4,-10 8,-14"/><polyline points="-2,-2 -5,-10 -9,-14"/><polyline points="-5,-2 -8,-8 -12,-11"/><polyline points="4,2 7,9 11,12"/><polyline points="1,2 4,10 8,14"/><polyline points="-2,2 -5,10 -9,14"/><polyline points="-5,2 -8,8 -12,11"/></g><ellipse cx="-3" cy="0" rx="7" ry="4.6" fill="#E6E6E6"/><circle cx="6" cy="0" r="3.4" fill="#E6E6E6"/></g></g></g>
 </svg>
