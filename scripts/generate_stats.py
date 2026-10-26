@@ -66,27 +66,27 @@ def languages_svg(langs):
     rest = sum(v for _, v in items[TOP_N:])
     if rest:
         top.append(("Other", rest))
-    track_x, track_w = 200, 590
-    h = 96 + len(top) * 44
+    track_x, track_w = 210, 520
+    h = 118 + len(top) * 54
     rows = []
     for i, (name, size) in enumerate(top):
         pct = size / total * 100
-        y = 96 + i * 44
+        y = 122 + i * 54
         bar = max(track_w * pct / 100, 4)
         t0 = 0.2 + i * 0.12
         rows.append(
             f'<circle cx="40" cy="{y}" r="6" fill="{LANG_COLORS.get(name, ACC)}"/>'
-            f'<text x="56" y="{y+6}" font-family="{SANS}" font-size="18" fill="{FG}">{escape(name)}</text>'
-            f'<rect x="{track_x}" y="{y-6}" width="{track_w}" height="12" rx="6" fill="{LINE}"/>'
-            f'<rect x="{track_x}" y="{y-6}" width="{bar:.1f}" height="12" rx="6" fill="{LANG_COLORS.get(name, ACC)}">'
+            f'<text x="56" y="{y+8}" font-family="{SANS}" font-size="24" fill="{FG}">{escape(name)}</text>'
+            f'<rect x="{track_x}" y="{y-7}" width="{track_w}" height="14" rx="7" fill="{LINE}"/>'
+            f'<rect x="{track_x}" y="{y-7}" width="{bar:.1f}" height="14" rx="7" fill="{LANG_COLORS.get(name, ACC)}">'
             f'<animate attributeName="width" values="0;0;{bar:.1f}" keyTimes="0;{t0/1.8:.3f};1" dur="1.8s" fill="freeze"/></rect>'
-            f'<text x="868" y="{y+6}" text-anchor="end" font-family="{MONO}" font-size="16" fill="{MUT}">{pct:.1f}%</text>'
+            f'<text x="868" y="{y+8}" text-anchor="end" font-family="{MONO}" font-size="22" fill="{MUT}">{pct:.1f}%</text>'
         )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 {h}" width="100%" role="img" aria-label="Most used languages across public repositories">
 <rect width="900" height="{h}" rx="16" fill="{BG}"/>
 <rect x=".5" y=".5" width="899" height="{h-1}" rx="15.5" fill="none" stroke="{LINE}"/>
-<text x="32" y="44" font-family="{SANS}" font-size="22" font-weight="600" fill="{FG}">Most used languages</text>
-<text x="32" y="66" font-family="{SANS}" font-size="14" fill="{MUT}">By bytes of code, public repositories · refreshed daily by GitHub Actions</text>
+<text x="32" y="48" font-family="{SANS}" font-size="30" font-weight="600" fill="{FG}">Most used languages</text>
+<text x="32" y="78" font-family="{SANS}" font-size="19" fill="{MUT}">By bytes of code, public repos · updated daily</text>
 {''.join(rows)}
 </svg>
 """
@@ -104,13 +104,13 @@ def overview_svg(data):
         x = 30 + i * 215
         out.append(
             f'<g opacity="1"><animate attributeName="opacity" values="0;0;1" keyTimes="0;{i*0.12:.2f};{i*0.12+0.3:.2f}" dur="1.4s" fill="freeze"/>'
-            f'<rect x="{x}" y="24" width="195" height="92" rx="12" fill="#141414" stroke="{LINE}"/>'
-            f'<text x="{x+22}" y="70" font-family="{SANS}" font-size="38" font-weight="700" fill="{FG}">{escape(num)}</text>'
-            f'<text x="{x+22}" y="98" font-family="{SANS}" font-size="15" fill="{MUT}">{escape(label)}</text></g>'
+            f'<rect x="{x}" y="24" width="195" height="104" rx="12" fill="#141414" stroke="{LINE}"/>'
+            f'<text x="{x+22}" y="78" font-family="{SANS}" font-size="46" font-weight="700" fill="{FG}">{escape(num)}</text>'
+            f'<text x="{x+22}" y="110" font-family="{SANS}" font-size="18" fill="{MUT}">{escape(label)}</text></g>'
         )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="100%" role="img" aria-label="GitHub overview">
-<rect width="900" height="140" rx="16" fill="{BG}"/>
-<rect x=".5" y=".5" width="899" height="139" rx="15.5" fill="none" stroke="{LINE}"/>
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 152" width="100%" role="img" aria-label="GitHub overview">
+<rect width="900" height="152" rx="16" fill="{BG}"/>
+<rect x=".5" y=".5" width="899" height="151" rx="15.5" fill="none" stroke="{LINE}"/>
 {''.join(out)}
 </svg>
 """

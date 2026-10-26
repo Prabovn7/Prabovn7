@@ -14,7 +14,7 @@
 
 <br />
 
-<img src="assets/status-en.svg" alt="Open to junior and internship backend opportunities" width="560" />
+<img src="assets/status-en.svg" alt="Open to junior and internship backend roles" width="560" />
 
 <img src="assets/divider.svg" alt="" width="100%" />
 
