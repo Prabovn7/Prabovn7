@@ -57,7 +57,6 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 **More projects**
 
-- <img src="assets/icons/lock.svg" width="16" height="16" alt=""> **SecureVault**: Local desktop app for file encryption with AES-GCM and Scrypt (Python, PySide6).
 - <img src="assets/icons/terminal.svg" width="16" height="16" alt=""> **<a href="https://github.com/Prabovn7/rpg-python">rpg-python</a>**: Object-oriented exercise: abstraction, inheritance and polymorphism in a small RPG.
 
 <h2><img src="assets/icons/layers.svg" width="24" height="24" alt=""> Scene 03 — Stack</h2>
@@ -76,17 +75,7 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 </details>
 
-<h2><img src="assets/icons/route.svg" width="24" height="24" alt=""> Scene 04 — Journey</h2>
-
-<div align="center">
-
-<img src="assets/timeline.svg" alt="Animated timeline: corporate operations in insurance since Oct 2022, Python and backend basics, Delivery API, SecureVault, Bus Ticket API in progress, now Backend Software Engineer, next concurrency, Docker and CI." width="100%">
-
-</div>
-
-**Next steps:** Concurrency control with PostgreSQL and Redis, Docker, CI with automated tests, security, software architecture and technical English.
-
-<h2><img src="assets/icons/activity.svg" width="24" height="24" alt=""> Scene 05 — Activity</h2>
+<h2><img src="assets/icons/activity.svg" width="24" height="24" alt=""> Scene 04 — Activity</h2>
 
 <div align="center">
 
@@ -94,11 +83,11 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 </div>
 
-<h2><img src="assets/icons/briefcase.svg" width="24" height="24" alt=""> Scene 06 — Background</h2>
+<h2><img src="assets/icons/briefcase.svg" width="24" height="24" alt=""> Scene 05 — Background</h2>
 
 Before moving into backend development I worked in corporate operations at an insurance company, handling contracts, documentation and corporate systems. That shaped how I build: clear rules, traceable data and well-defined processes.
 
-<h2><img src="assets/icons/mail.svg" width="24" height="24" alt=""> Scene 07 — Contact</h2>
+<h2><img src="assets/icons/mail.svg" width="24" height="24" alt=""> Scene 06 — Contact</h2>
 
 <img src="assets/icons/linkedin.svg" width="18" height="18" alt=""> <a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a>  
 <img src="assets/icons/github.svg" width="18" height="18" alt=""> <a href="https://github.com/Prabovn7">github.com/Prabovn7</a>

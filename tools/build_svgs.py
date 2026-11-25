@@ -140,5 +140,4 @@ def build_timeline() -> str:
 if __name__ == "__main__":
     ASSETS.mkdir(exist_ok=True)
     (ASSETS / "stack.svg").write_text(build_stack(), encoding="utf-8")
-    (ASSETS / "timeline.svg").write_text(build_timeline(), encoding="utf-8")
     print("ok")

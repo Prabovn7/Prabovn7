@@ -26,7 +26,7 @@ STR = {
         "role": "Backend Software Engineer",
         "status": "Open to junior and internship backend roles",
         "other_lang": ("README.pt-BR.md", "Português (BR)"),
-        "scenes": ["About", "Featured projects", "Stack", "Journey", "Activity", "Background", "Contact"],
+        "scenes": ["About", "Featured projects", "Stack", "Activity", "Background", "Contact"],
         "word": "Scene",
         "about": "Software Engineering student focused on backend development. I build APIs with authentication, "
                  "data persistence and automated tests, using Python, FastAPI, PostgreSQL and Docker.",
@@ -52,23 +52,16 @@ STR = {
         ],
         "more": "More projects",
         "more_items": [
-            ("lock", "SecureVault", None, "Local desktop app for file encryption with AES-GCM and Scrypt (Python, PySide6)."),
             ("terminal", "rpg-python", "rpg-python", "Object-oriented exercise: abstraction, inheritance and polymorphism in a small RPG."),
         ],
         "stack_alt": "Animated tech stack: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, "
                      "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code.",
         "stack_text": "Stack as text",
         "stack_labels": ("Languages", "Backend and data", "Tools"),
-        "timeline_alt": "Animated timeline: corporate operations in insurance since Oct 2022, Python and backend "
-                        "basics, Delivery API, SecureVault, Bus Ticket API in progress, now Backend Software "
-                        "Engineer, next concurrency, Docker and CI.",
         "activity_alt": "Animated grid of my recent GitHub contribution activity, updated daily.",
         "background": "Before moving into backend development I worked in corporate operations at an insurance "
                       "company, handling contracts, documentation and corporate systems. That shaped how I build: "
                       "clear rules, traceable data and well-defined processes.",
-        "next_title": "Next steps",
-        "next": "Concurrency control with PostgreSQL and Redis, Docker, CI with automated tests, security, "
-                "software architecture and technical English.",
         "contact": "Let's talk",
     },
     "pt": {
@@ -77,7 +70,7 @@ STR = {
         "role": "Backend Software Engineer",
         "status": "Aberto a vagas de estágio e júnior em backend",
         "other_lang": ("README.md", "English"),
-        "scenes": ["Sobre", "Projetos em destaque", "Stack", "Trajetória", "Atividade", "Contexto", "Contato"],
+        "scenes": ["Sobre", "Projetos em destaque", "Stack", "Atividade", "Contexto", "Contato"],
         "word": "Cena",
         "about": "Estudante de Engenharia de Software com foco em desenvolvimento backend. Construo APIs com "
                  "autenticação, persistência de dados e testes automatizados, usando Python, FastAPI, PostgreSQL e Docker.",
@@ -103,23 +96,16 @@ STR = {
         ],
         "more": "Mais projetos",
         "more_items": [
-            ("lock", "SecureVault", None, "App desktop local para criptografia de arquivos com AES-GCM e Scrypt (Python, PySide6)."),
             ("terminal", "rpg-python", "rpg-python", "Exercício de orientação a objetos: abstração, herança e polimorfismo em um RPG simples."),
         ],
         "stack_alt": "Stack animada: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, "
                      "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code.",
         "stack_text": "Stack em texto",
         "stack_labels": ("Linguagens", "Backend e dados", "Ferramentas"),
-        "timeline_alt": "Linha do tempo animada: operações corporativas em seguros desde out/2022, base de Python e "
-                        "backend, Delivery API, SecureVault, Bus Ticket API em andamento, hoje Backend Software "
-                        "Engineer, próximos passos: concorrência, Docker e CI.",
         "activity_alt": "Grade animada da minha atividade recente de contribuições no GitHub, atualizada diariamente.",
         "background": "Antes de migrar para backend, trabalhei com operações corporativas em uma seguradora, lidando "
                       "com contratos, documentação e sistemas corporativos. Isso moldou meu jeito de construir: "
                       "regras claras, dados rastreáveis e processos bem definidos.",
-        "next_title": "Próximos passos",
-        "next": "Controle de concorrência com PostgreSQL e Redis, Docker, CI com testes automatizados, segurança, "
-                "arquitetura de software e inglês técnico.",
         "contact": "Vamos conversar",
     },
 }
@@ -192,21 +178,15 @@ def build(lang: str) -> str:
     a(f"- **{tools_l}:** {STACK_LINES[2]}\n")
     a("</details>\n")
 
-    a(h2("route", sc[3]) + "\n")
-    a('<div align="center">\n')
-    a(f'<img src="assets/timeline.svg" alt="{s["timeline_alt"]}" width="100%">\n')
-    a("</div>\n")
-    a(f"**{s['next_title']}:** {s['next']}\n")
-
-    a(h2("activity", sc[4]) + "\n")
+    a(h2("activity", sc[3]) + "\n")
     a('<div align="center">\n')
     a(f'<img src="assets/activity.svg" alt="{s["activity_alt"]}" width="100%">\n')
     a("</div>\n")
 
-    a(h2("briefcase", sc[5]) + "\n")
+    a(h2("briefcase", sc[4]) + "\n")
     a(s["background"] + "\n")
 
-    a(h2("mail", sc[6]) + "\n")
+    a(h2("mail", sc[5]) + "\n")
     a(f'{ic("linkedin", 18)} <a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a>  \n'
       f'{ic("github", 18)} <a href="{GH}">github.com/Prabovn7</a>\n')
     return "\n".join(out) + "\n"

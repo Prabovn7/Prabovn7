@@ -57,7 +57,6 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 **Mais projetos**
 
-- <img src="assets/icons/lock.svg" width="16" height="16" alt=""> **SecureVault**: App desktop local para criptografia de arquivos com AES-GCM e Scrypt (Python, PySide6).
 - <img src="assets/icons/terminal.svg" width="16" height="16" alt=""> **<a href="https://github.com/Prabovn7/rpg-python">rpg-python</a>**: Exercício de orientação a objetos: abstração, herança e polimorfismo em um RPG simples.
 
 <h2><img src="assets/icons/layers.svg" width="24" height="24" alt=""> Cena 03 — Stack</h2>
@@ -76,17 +75,7 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 </details>
 
-<h2><img src="assets/icons/route.svg" width="24" height="24" alt=""> Cena 04 — Trajetória</h2>
-
-<div align="center">
-
-<img src="assets/timeline.svg" alt="Linha do tempo animada: operações corporativas em seguros desde out/2022, base de Python e backend, Delivery API, SecureVault, Bus Ticket API em andamento, hoje Backend Software Engineer, próximos passos: concorrência, Docker e CI." width="100%">
-
-</div>
-
-**Próximos passos:** Controle de concorrência com PostgreSQL e Redis, Docker, CI com testes automatizados, segurança, arquitetura de software e inglês técnico.
-
-<h2><img src="assets/icons/activity.svg" width="24" height="24" alt=""> Cena 05 — Atividade</h2>
+<h2><img src="assets/icons/activity.svg" width="24" height="24" alt=""> Cena 04 — Atividade</h2>
 
 <div align="center">
 
@@ -94,11 +83,11 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 </div>
 
-<h2><img src="assets/icons/briefcase.svg" width="24" height="24" alt=""> Cena 06 — Contexto</h2>
+<h2><img src="assets/icons/briefcase.svg" width="24" height="24" alt=""> Cena 05 — Contexto</h2>
 
 Antes de migrar para backend, trabalhei com operações corporativas em uma seguradora, lidando com contratos, documentação e sistemas corporativos. Isso moldou meu jeito de construir: regras claras, dados rastreáveis e processos bem definidos.
 
-<h2><img src="assets/icons/mail.svg" width="24" height="24" alt=""> Cena 07 — Contato</h2>
+<h2><img src="assets/icons/mail.svg" width="24" height="24" alt=""> Cena 06 — Contato</h2>
 
 <img src="assets/icons/linkedin.svg" width="18" height="18" alt=""> <a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a>  
 <img src="assets/icons/github.svg" width="18" height="18" alt=""> <a href="https://github.com/Prabovn7">github.com/Prabovn7</a>
