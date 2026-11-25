@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 271" width="560" height="271" role="img" aria-label="Git activity: 462 contributions in the last 26 weeks, current streak 1 days">
 <title>Git activity</title>
-<style>text{font-family:-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif}.t{font-size:18px;font-weight:600;fill:#e8e8e8}.s{font-size:13px;fill:#9a9a9a}.k{font-size:11px;fill:#6b6b6b}.cell{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}.l0{fill:#1a1a1a}.l1{fill:#3a3a3a}.l2{fill:#666666}.l3{fill:#9a9a9a}.l4{fill:#e6e6e6}@media (prefers-reduced-motion: reduce){.cell{animation:none;opacity:1}}</style>
-<rect x="0.5" y="0.5" width="559" height="270" rx="16" fill="#0a0a0a" stroke="#1f1f1f"/>
-<g class="ico" transform="translate(24.00 22.00) scale(0.9167)"><g fill="none" stroke="#e0e0e0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></g></g>
+<style>text{font-family:-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif}.t{font-size:18px;font-weight:600;fill:#E6ECF8}.s{font-size:13px;fill:#8AA4FF}.k{font-size:11px;fill:#6B7FA3}.cell{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}.today{stroke:#5CC8FF;stroke-width:1.5;animation:pop .5s ease-out both,pulse 2.4s ease-in-out infinite}@keyframes pulse{0%,100%{stroke-opacity:1}50%{stroke-opacity:.15}}.flame{transform-box:fill-box;transform-origin:center bottom;animation:flicker 1.8s ease-in-out infinite}@keyframes flicker{0%,100%{transform:scale(1);opacity:1}40%{transform:scale(1.12,.94);opacity:.8}70%{transform:scale(.95,1.08);opacity:1}}.l0{fill:#1B2C52}.l1{fill:#2F6FED}.l2{fill:#8AA4FF}.l3{fill:#5CC8FF}.l4{fill:#B9D0FF}@media (prefers-reduced-motion: reduce){.cell,.today{animation:none;opacity:1}.flame{animation:none}}</style>
+<rect x="0.5" y="0.5" width="559" height="270" rx="16" fill="#101E3A" stroke="#1B2C52"/>
+<g class="ico" transform="translate(24.00 22.00) scale(0.9167)"><g fill="none" stroke="#5CC8FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></g></g>
 <text class="t" x="54" y="40">Git activity</text>
 <text class="s" x="24" y="64">462 contributions in the last 26 weeks</text>
-<g class="ico" transform="translate(370.00 46.00) scale(0.7500)"><g fill="none" stroke="#bdbdbd" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></g></g>
+<g class="flame"><g class="ico" transform="translate(370.00 46.00) scale(0.7500)"><g fill="none" stroke="#8AA4FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></g></g></g>
 <text class="s" x="392" y="60">1-day streak</text>
 <text class="k" x="24" y="115">Mon</text>
 <text class="k" x="24" y="153">Wed</text>
@@ -188,13 +188,13 @@
 <rect class="cell l3" data-level="3" data-date="2026-11-22" x="527" y="84" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-22: 5</title></rect>
 <rect class="cell l0" data-level="0" data-date="2026-11-23" x="527" y="103" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-23: 0</title></rect>
 <rect class="cell l0" data-level="0" data-date="2026-11-24" x="527" y="122" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-24: 0</title></rect>
-<rect class="cell l3" data-level="3" data-date="2026-11-25" x="527" y="141" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-25: 5</title></rect>
+<rect class="cell l3 today" data-level="3" data-date="2026-11-25" x="527" y="141" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-25: 5</title></rect>
 <text class="k" x="24" y="253">Preview data - replaced daily by the GitHub Action</text>
 <text class="k" x="392" y="253">Less</text>
-<rect x="424" y="243" width="15" height="15" rx="3" fill="#1a1a1a"/>
-<rect x="443" y="243" width="15" height="15" rx="3" fill="#3a3a3a"/>
-<rect x="462" y="243" width="15" height="15" rx="3" fill="#666666"/>
-<rect x="481" y="243" width="15" height="15" rx="3" fill="#9a9a9a"/>
-<rect x="500" y="243" width="15" height="15" rx="3" fill="#e6e6e6"/>
+<rect x="424" y="243" width="15" height="15" rx="3" fill="#1B2C52"/>
+<rect x="443" y="243" width="15" height="15" rx="3" fill="#2F6FED"/>
+<rect x="462" y="243" width="15" height="15" rx="3" fill="#8AA4FF"/>
+<rect x="481" y="243" width="15" height="15" rx="3" fill="#5CC8FF"/>
+<rect x="500" y="243" width="15" height="15" rx="3" fill="#B9D0FF"/>
 <text class="k" x="524" y="253">More</text>
 </svg>

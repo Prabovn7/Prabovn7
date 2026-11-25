@@ -14,10 +14,11 @@ from datetime import date, datetime, timedelta
 from html import escape
 from pathlib import Path
 
-from build_svgs import BG, DIM, EDGE, FONT, TXT, icon
+from build_svgs import FONT, icon
+from palette import BLUE, EDGE, ICE, MUTED, PALE, PANEL, PERI, TEXT
 
 CELL, GAP, LEFT, TOP = 15, 4, 52, 84
-LEVEL_FILL = ["#1a1a1a", "#3a3a3a", "#666666", "#9a9a9a", "#e6e6e6"]
+LEVEL_FILL = [EDGE, BLUE, PERI, ICE, PALE]
 
 
 def _level(count: int, peak: int) -> int:
@@ -51,13 +52,18 @@ def build_activity_svg(counts: dict[date, int], weeks: int = 26, today: date | N
     height = TOP + 7 * (CELL + GAP) + 54
     css = [
         f"text{{font-family:{FONT}}}",
-        f".t{{font-size:18px;font-weight:600;fill:#e8e8e8}}",
-        f".s{{font-size:13px;fill:{TXT}}}",
-        f".k{{font-size:11px;fill:{DIM}}}",
+        f".t{{font-size:18px;font-weight:600;fill:{TEXT}}}",
+        f".s{{font-size:13px;fill:{PERI}}}",
+        f".k{{font-size:11px;fill:{MUTED}}}",
         ".cell{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}",
         "@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}",
+        f".today{{stroke:{ICE};stroke-width:1.5;animation:pop .5s ease-out both,pulse 2.4s ease-in-out infinite}}",
+        "@keyframes pulse{0%,100%{stroke-opacity:1}50%{stroke-opacity:.15}}",
+        ".flame{transform-box:fill-box;transform-origin:center bottom;animation:flicker 1.8s ease-in-out infinite}",
+        "@keyframes flicker{0%,100%{transform:scale(1);opacity:1}40%{transform:scale(1.12,.94);opacity:.8}"
+        "70%{transform:scale(.95,1.08);opacity:1}}",
     ] + [f".l{i}{{fill:{c}}}" for i, c in enumerate(LEVEL_FILL)] + [
-        "@media (prefers-reduced-motion: reduce){.cell{animation:none;opacity:1}}",
+        "@media (prefers-reduced-motion: reduce){.cell,.today{animation:none;opacity:1}.flame{animation:none}}",
     ]
     label = f"{total} contributions in the last {weeks} weeks"
     parts = [
@@ -65,11 +71,11 @@ def build_activity_svg(counts: dict[date, int], weeks: int = 26, today: date | N
         f'role="img" aria-label="Git activity: {label}, current streak {streak} days">',
         "<title>Git activity</title>",
         f"<style>{''.join(css)}</style>",
-        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="16" fill="{BG}" stroke="{EDGE}"/>',
-        icon("activity", 24, 22, 22, "#e0e0e0"),
+        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="16" fill="{PANEL}" stroke="{EDGE}"/>',
+        icon("activity", 24, 22, 22, ICE),
         '<text class="t" x="54" y="40">Git activity</text>',
         f'<text class="s" x="24" y="64">{escape(label)}</text>',
-        icon("flame", width - 190, 46, 18, "#bdbdbd"),
+        f'<g class="flame">{icon("flame", width - 190, 46, 18, PERI)}</g>',
         f'<text class="s" x="{width - 168}" y="60">{streak}-day streak</text>',
     ]
     for r, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
@@ -80,7 +86,7 @@ def build_activity_svg(counts: dict[date, int], weeks: int = 26, today: date | N
         n = counts.get(d, 0)
         lvl = _level(n, peak)
         parts.append(
-            f'<rect class="cell l{lvl}" data-level="{lvl}" data-date="{d.isoformat()}" '
+            f'<rect class="cell l{lvl}{" today" if d == today else ""}" data-level="{lvl}" data-date="{d.isoformat()}" '
             f'x="{LEFT + col * (CELL + GAP)}" y="{TOP + row * (CELL + GAP)}" width="{CELL}" height="{CELL}" rx="3" '
             f'style="animation-delay:{col * 0.035:.2f}s"><title>{d.isoformat()}: {n}</title></rect>'
         )
