@@ -20,9 +20,7 @@ h1{font-size:22px;margin:8px 0 2px}
 .c,.sp{aspect-ratio:1}.c{border-radius:3px;background:var(--edge);animation:pop .5s ease-out both}
 .l1{background:var(--blue)}.l2{background:var(--peri)}.l3{background:var(--ice)}.l4{background:var(--pale)}
 .c.sel{outline:2px solid var(--text);outline-offset:1px;z-index:1;position:relative}
-.c.rip{animation:ripple .6s ease-out both}
 @keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
-@keyframes ripple{0%{transform:scale(1)}40%{transform:scale(1.6);filter:brightness(1.4)}100%{transform:scale(1)}}
 #info{min-height:64px;margin-top:14px;border-top:1px solid var(--edge);padding-top:12px}
 #info b{font-size:22px}
 #info span{color:var(--peri);display:block;font-size:14px}
@@ -30,7 +28,7 @@ h1{font-size:22px;margin:8px 0 2px}
 .legend{display:flex;align-items:center;gap:4px;justify-content:flex-end;color:var(--muted);font-size:12px;margin-top:10px}
 .legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
 .back{color:var(--ice);font-size:14px}
-@media (prefers-reduced-motion: reduce){.c,.c.rip{animation:none}}
+@media (prefers-reduced-motion: reduce){.c{animation:none}}
 </style>
 </head>
 <body>
@@ -61,6 +59,7 @@ h1{font-size:22px;margin:8px 0 2px}
   }
   function show(c) {
     if (!c) return;
+    if (c === sel) return;
     if (sel) sel.classList.remove("sel");
     sel = c; c.classList.add("sel");
     var n = +c.dataset.n, d = new Date(c.dataset.d + "T12:00:00");
@@ -71,9 +70,9 @@ h1{font-size:22px;margin:8px 0 2px}
     var col = +c.dataset.col, row = +c.dataset.row;
     cells.forEach(function (o) {
       var dist = Math.abs(o.dataset.col - col) + Math.abs(o.dataset.row - row);
-      if (dist > 6) return;
-      o.classList.remove("rip"); void o.offsetWidth;
-      o.style.animationDelay = (dist * 35) + "ms"; o.classList.add("rip");
+      if (dist > 6 || !o.animate) return;
+      o.animate([{ transform: "scale(1)", filter: "brightness(1)" }, { transform: "scale(1.5)", filter: "brightness(1.4)", offset: 0.4 },
+                 { transform: "scale(1)", filter: "brightness(1)" }], { duration: 600, delay: dist * 35, easing: "ease-out" });
     });
   }
   function fromPoint(e) { var el = document.elementFromPoint(e.clientX, e.clientY); return el && el.classList.contains("c") ? el : null; }
