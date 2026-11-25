@@ -18,16 +18,12 @@ const out = {}, dir = path.join(profile, 'assets', 'icons');
 fs.mkdirSync(dir, { recursive: true });
 for (const [name, key] of Object.entries(brands)) {
   const p = si[key].path;
-  out[name] = { type: 'brand', path: p };
-  fs.writeFileSync(path.join(dir, name + '.svg'),
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img"><title>${name}</title><path fill="${GRAY}" d="${p}"/></svg>\n`);
+  out[name] = { type: 'brand', path: p, hex: '#' + si[key].hex };
 }
 for (const [name, file] of Object.entries(lucide)) {
   const raw = fs.readFileSync(path.join('node_modules/lucide-static/icons', file + '.svg'), 'utf8');
   const inner = raw.replace(/^[\s\S]*?<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').replace(/<!--[\s\S]*?-->/g, '').trim();
   out[name] = { type: 'lucide', inner };
-  fs.writeFileSync(path.join(dir, name + '.svg'),
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="${GRAY}" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" role="img"><title>${name}</title>${inner}</svg>\n`);
 }
 fs.writeFileSync(path.join(profile, 'tools', 'icon_paths.json'), JSON.stringify(out, null, 1));
 console.log(Object.keys(out).length, 'icons');

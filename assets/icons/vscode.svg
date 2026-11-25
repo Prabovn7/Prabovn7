@@ -1,3 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#8b8b8b" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" role="img"><title>vscode</title><path d="m18 16 4-4-4-4" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img"><title>vscode</title><rect width="32" height="32" rx="8" fill="#101E3A"/><g transform="translate(6 6) scale(0.8333)"><g fill="none" stroke="#8AA4FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4" />
   <path d="m6 8-4 4 4 4" />
-  <path d="m14.5 4-5 16" /></svg>
+  <path d="m14.5 4-5 16" /></g></g></svg>
