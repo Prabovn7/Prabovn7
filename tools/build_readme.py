@@ -22,10 +22,13 @@ def h2(icon: str, text: str) -> str:
 STR = {
     "en": {
         "file": "README.md",
-        "hero_alt": "Pablo Santos, Backend Software Engineer. APIs, Architecture, Security. Animated monochrome banner.",
+        "hero_alt": "Pablo Santos, Backend Software Engineer. APIs, Architecture, Security. Animated navy banner.",
         "role": "Backend Software Engineer",
         "status": "Open to junior and internship backend roles",
         "other_lang": ("README.pt-BR.md", "Português (BR)"),
+        "roles_alt": "Building APIs, architecture and security (animated line cycling through the three words).",
+        "overview_alt": "GitHub overview: public repositories, stars received, followers and languages.",
+        "languages_alt": "Most used languages across my public repositories, by bytes of code.",
         "scenes": ["About", "Featured projects", "Stack", "Activity", "Background", "Contact"],
         "word": "Scene",
         "about": "Software Engineering student focused on backend development. I build APIs with authentication, "
@@ -66,10 +69,13 @@ STR = {
     },
     "pt": {
         "file": "README.pt-BR.md",
-        "hero_alt": "Pablo Santos, Backend Software Engineer. APIs, Arquitetura, Segurança. Banner animado monocromático.",
+        "hero_alt": "Pablo Santos, Backend Software Engineer. APIs, Arquitetura, Segurança. Banner animado em azul marinho.",
         "role": "Backend Software Engineer",
         "status": "Aberto a vagas de estágio e júnior em backend",
         "other_lang": ("README.md", "English"),
+        "roles_alt": "Construindo APIs, arquitetura e segurança (linha animada alternando as três palavras).",
+        "overview_alt": "Resumo do GitHub: repositórios públicos, estrelas recebidas, seguidores e linguagens.",
+        "languages_alt": "Linguagens mais usadas nos meus repositórios públicos, por bytes de código.",
         "scenes": ["Sobre", "Projetos em destaque", "Stack", "Atividade", "Contexto", "Contato"],
         "word": "Cena",
         "about": "Estudante de Engenharia de Software com foco em desenvolvimento backend. Construo APIs com "
@@ -125,39 +131,48 @@ CARD_TECH = {
 }
 
 
+def deco(name: str, width: str = "100%", height: str = "") -> str:
+    h = f' height="{height}"' if height else ""
+    return f'<img src="assets/{name}" width="{width}"{h} alt="">'
+
+
 def build(lang: str) -> str:
     s = STR[lang]
     sc = [f"{s['word']} 0{i + 1} — {t}" for i, t in enumerate(s["scenes"])]
     other_file, other_name = s["other_lang"]
+    right_now = "right-now-pt.svg" if lang == "pt" else "right-now.svg"
+    focus_alt = s["focus"] + ": " + "; ".join(t for _, t in s["focus_items"])
     out: list[str] = []
     a = out.append
+    divider = f'<div align="center">{deco("scene-divider.svg")}</div>\n'
 
     a('<div align="center">\n')
     a('<picture>\n<source media="(prefers-reduced-motion: reduce)" srcset="assets/hero-static.png">\n'
       f'<img src="assets/hero.webp" alt="{s["hero_alt"]}" width="100%">\n</picture>\n')
-    a("# Pablo Santos\n")
-    a(f"**{s['role']}** · APIs · Architecture · Security\n")
+    a(f'<img src="assets/roles.svg" alt="{s["roles_alt"]}" width="380">\n')
     a(f'{ic("target", 16)} {s["status"]}\n')
-    a(f'<a href="https://www.linkedin.com/in/pablov-santos-dev">{ic("linkedin", 16)} LinkedIn</a> &nbsp;·&nbsp; '
-      f'<a href="{GH}">{ic("github", 16)} GitHub</a> &nbsp;·&nbsp; '
-      f'<a href="{other_file}">{ic("globe", 16)} {other_name}</a>\n')
+    a(f'<a href="https://www.linkedin.com/in/pablov-santos-dev"><img src="assets/btn-linkedin.svg" height="44" alt="LinkedIn"></a> '
+      f'<a href="{GH}"><img src="assets/btn-github.svg" height="44" alt="GitHub"></a>\n')
+    a(f'<a href="{other_file}">{ic("globe", 16)} {other_name}</a>\n')
     a("</div>\n")
 
+    a(divider)
     a(h2("user", sc[0]) + "\n")
     a(s["about"] + "\n")
-    a(f"**{s['focus']}**\n")
-    for icon, text in s["focus_items"]:
-        a(f"- {ic(icon, 16)} {text}")
-    a("")
+    a('<div align="center">\n')
+    a(f'<img src="assets/{right_now}" alt="{focus_alt}" width="100%">\n')
+    a("</div>\n")
 
+    a(divider)
     a(h2("folder", sc[1]) + "\n")
-    a('<table>')
+    a("<table>")
     for row in (0, 2):
         a("<tr>")
-        for icon, title, repo, wip, desc in s["cards"][row:row + 2]:
+        for k, (icon, title, repo, wip, desc) in enumerate(s["cards"][row:row + 2]):
             badge = f" <sub>· {s['progress']}</sub>" if wip else ""
             a(f'<td width="50%" valign="top">\n'
               f'{ic(icon, 20)} <b><a href="{GH}/{repo}">{title}</a></b>{badge}<br>\n'
+              f'{deco(f"bar-{row + k + 1}.svg", "100%", "6")}<br>\n'
               f'{desc}<br><br>\n{tech(*CARD_TECH[repo])}\n</td>')
         a("</tr>")
     a("</table>\n")
@@ -167,6 +182,7 @@ def build(lang: str) -> str:
         a(f"- {ic(icon, 16)} **{name}**: {desc}")
     a("")
 
+    a(divider)
     a(h2("layers", sc[2]) + "\n")
     a('<div align="center">\n')
     a(f'<img src="assets/stack.svg" alt="{s["stack_alt"]}" width="100%">\n')
@@ -178,14 +194,19 @@ def build(lang: str) -> str:
     a(f"- **{tools_l}:** {STACK_LINES[2]}\n")
     a("</details>\n")
 
+    a(divider)
     a(h2("activity", sc[3]) + "\n")
     a('<div align="center">\n')
+    a(f'<img src="assets/stats/overview.svg" alt="{s["overview_alt"]}" width="100%">\n')
+    a(f'<img src="assets/stats/languages.svg" alt="{s["languages_alt"]}" width="100%">\n')
     a(f'<img src="assets/activity.svg" alt="{s["activity_alt"]}" width="100%">\n')
     a("</div>\n")
 
+    a(divider)
     a(h2("briefcase", sc[4]) + "\n")
     a(s["background"] + "\n")
 
+    a(divider)
     a(h2("mail", sc[5]) + "\n")
     a(f'{ic("linkedin", 18)} <a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a>  \n'
       f'{ic("github", 18)} <a href="{GH}">github.com/Prabovn7</a>\n')
