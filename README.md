@@ -11,7 +11,7 @@
 
 <a href="https://www.linkedin.com/in/pablov-santos-dev"><img src="assets/btn-linkedin.svg" height="44" alt="LinkedIn"></a> <a href="https://github.com/Prabovn7"><img src="assets/btn-github.svg" height="44" alt="GitHub"></a>
 
-<a href="README.pt-BR.md"><img src="assets/icons/globe.svg" width="20" height="20" alt="Português (BR)"></a> Português (BR)
+<a href="README.pt-BR.md"><img src="assets/icons/globe.svg" width="20" height="20" alt="Português (BR)"> Português (BR)</a>
 
 </div>
 

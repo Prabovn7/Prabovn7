@@ -157,7 +157,7 @@ def build(lang: str) -> str:
     a(f'{ic("target", 16)} {s["status"]}\n')
     a(f'<a href="https://www.linkedin.com/in/pablov-santos-dev"><img src="assets/btn-linkedin.svg" height="44" alt="LinkedIn"></a> '
       f'<a href="{GH}"><img src="assets/btn-github.svg" height="44" alt="GitHub"></a>\n')
-    a(f'<a href="{other_file}">{ic("globe", 20, other_name)}</a> {other_name}\n')
+    a(f'<a href="{other_file}">{ic("globe", 20, other_name)} {other_name}</a>\n')
     a("</div>\n")
 
     a(divider)
