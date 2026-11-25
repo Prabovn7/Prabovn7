@@ -98,6 +98,12 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 <sub>Tap the grid to explore each day.</sub>
 
+<details><summary>Contributions by month</summary>
+
+<img src="assets/activity-months.svg" alt="Animated bar chart of my GitHub contributions per month over the last six months." width="100%">
+
+</details>
+
 </div>
 
 <div align="center"><img src="assets/scene-divider.svg" width="100%" alt=""></div>

@@ -126,6 +126,59 @@ def build_activity_svg(counts: dict[date, int], weeks: int = 26, today: date | N
     return "\n".join(parts) + "\n"
 
 
+def build_months_svg(counts: dict[date, int], today: date | None = None, months: int = 6) -> str:
+    """Animated per-month bar chart shown inside the README's expandable 'By month' block."""
+    today = today or date.today()
+    keys = []
+    y, m = today.year, today.month
+    for _ in range(months):
+        keys.append((y, m))
+        y, m = (y, m - 1) if m > 1 else (y - 1, 12)
+    keys.reverse()
+    totals = {k: 0 for k in keys}
+    for d, n in counts.items():
+        if (d.year, d.month) in totals and d <= today:
+            totals[(d.year, d.month)] += n
+    peak = max(totals.values(), default=0)
+    width, height, left, base, ch = 560, 230, 24, 172, 110
+    slot = (width - 2 * left) / months
+    bw = slot - 22
+    css = [
+        f"text{{font-family:{FONT}}}",
+        f".k{{font-size:13px;fill:{PERI}}}",
+        f".v{{font-size:16px;font-weight:700;fill:{TEXT}}}",
+        ".mbar{transform-box:fill-box;transform-origin:bottom;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}",
+        "@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}",
+        ".vv{animation:fade .6s ease-out both}@keyframes fade{from{opacity:0}to{opacity:1}}",
+    ] + [f".l{i}{{fill:{c}}}" for i, c in enumerate(LEVEL_FILL)] + [
+        "@media (prefers-reduced-motion: reduce){.mbar,.vv{animation:none}}",
+    ]
+    total = sum(totals.values())
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
+        f'role="img" aria-label="Contributions per month, last {months} months: {total} in total">',
+        "<title>Contributions per month</title>",
+        f"<style>{''.join(css)}</style>",
+        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="16" fill="{PANEL}" stroke="{EDGE}"/>',
+        f'<line x1="{left}" y1="{base + 4}" x2="{width - left}" y2="{base + 4}" stroke="{EDGE}"/>',
+    ]
+    for i, k in enumerate(keys):
+        n = totals[k]
+        h = 6 if n <= 0 else max(10, round(ch * n / peak))
+        x = left + i * slot + 11
+        lvl = _level(n, peak)
+        label = date(k[0], k[1], 1).strftime("%b")
+        dl = f"{i * 0.1:.1f}s"
+        parts.append(
+            f'<rect class="mbar l{lvl}" data-total="{n}" x="{x:.1f}" y="{base - h}" width="{bw:.1f}" height="{h}" rx="6" '
+            f'style="animation-delay:{dl}"><title>{label}: {n}</title></rect>'
+            f'<text class="vv v" x="{x + bw / 2:.1f}" y="{base - h - 8}" text-anchor="middle" style="animation-delay:{dl}">{n}</text>'
+            f'<text class="k" x="{x + bw / 2:.1f}" y="{base + 24}" text-anchor="middle">{label}</text>'
+        )
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
+
+
 def activity_json(counts: dict[date, int], weeks: int = 26, today: date | None = None) -> str:
     """Per-day counts for the interactive page (docs/index.html reads docs/activity.json)."""
     today = today or date.today()
@@ -175,6 +228,7 @@ def main() -> None:
     ap.add_argument("--user", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--weeks", type=int, default=26)
+    ap.add_argument("--months", help="also write the per-month chart SVG")
     ap.add_argument("--json", help="also write per-day data for the interactive page")
     ap.add_argument("--source", choices=["graphql", "events", "sample"], default="graphql")
     a = ap.parse_args()
@@ -184,6 +238,8 @@ def main() -> None:
     else:
         counts = fetch_graphql(a.user) if a.source == "graphql" else fetch_events(a.user)
     Path(a.out).write_text(build_activity_svg(counts, a.weeks, note=note), encoding="utf-8")
+    if a.months:
+        Path(a.months).write_text(build_months_svg(counts), encoding="utf-8")
     if a.json:
         Path(a.json).parent.mkdir(parents=True, exist_ok=True)
         Path(a.json).write_text(activity_json(counts, a.weeks), encoding="utf-8")

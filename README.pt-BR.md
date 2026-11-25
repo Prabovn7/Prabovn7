@@ -98,6 +98,12 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 <sub>Toque na grade para explorar cada dia.</sub>
 
+<details><summary>Contribuições por mês</summary>
+
+<img src="assets/activity-months.svg" alt="Gráfico animado de barras das minhas contribuições no GitHub por mês nos últimos seis meses." width="100%">
+
+</details>
+
 </div>
 
 <div align="center"><img src="assets/scene-divider.svg" width="100%" alt=""></div>
