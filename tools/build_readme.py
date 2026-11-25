@@ -138,7 +138,7 @@ def deco(name: str, width: str = "100%", height: str = "") -> str:
 
 def build(lang: str) -> str:
     s = STR[lang]
-    sc = [f"{s['word']} 0{i + 1} — {t}" for i, t in enumerate(s["scenes"])]
+    sc = list(s["scenes"])
     other_file, other_name = s["other_lang"]
     right_now = "right-now-pt.svg" if lang == "pt" else "right-now.svg"
     focus_alt = s["focus"] + ": " + "; ".join(t for _, t in s["focus_items"])
@@ -153,7 +153,7 @@ def build(lang: str) -> str:
     a(f'{ic("target", 16)} {s["status"]}\n')
     a(f'<a href="https://www.linkedin.com/in/pablov-santos-dev"><img src="assets/btn-linkedin.svg" height="44" alt="LinkedIn"></a> '
       f'<a href="{GH}"><img src="assets/btn-github.svg" height="44" alt="GitHub"></a>\n')
-    a(f'<a href="{other_file}">{ic("globe", 16)} {other_name}</a>\n')
+    a(f'<a href="{other_file}">{ic("globe", 20, other_name)}</a> {other_name}\n')
     a("</div>\n")
 
     a(divider)
@@ -171,15 +171,14 @@ def build(lang: str) -> str:
         for k, (icon, title, repo, wip, desc) in enumerate(s["cards"][row:row + 2]):
             badge = f" <sub>· {s['progress']}</sub>" if wip else ""
             a(f'<td width="50%" valign="top">\n'
-              f'{ic(icon, 20)} <b><a href="{GH}/{repo}">{title}</a></b>{badge}<br>\n'
+              f'<a href="{GH}/{repo}">{ic(icon, 24, title)}</a> <b>{title}</b>{badge}<br>\n'
               f'{deco(f"bar-{row + k + 1}.svg", "100%", "6")}<br>\n'
-              f'{desc}<br><br>\n{tech(*CARD_TECH[repo])}\n</td>')
+              f'{desc}<br><br>\n{tech(*CARD_TECH[repo])} &nbsp; <a href="{GH}/{repo}">{ic("github", 20, "GitHub: " + title)}</a>\n</td>')
         a("</tr>")
     a("</table>\n")
     a(f"**{s['more']}**\n")
     for icon, title, repo, desc in s["more_items"]:
-        name = f'<a href="{GH}/{repo}">{title}</a>' if repo else title
-        a(f"- {ic(icon, 16)} **{name}**: {desc}")
+        a(f'- <a href="{GH}/{repo}">{ic(icon, 20, title)}</a> **{title}**: {desc}')
     a("")
 
     a(divider)
@@ -208,8 +207,10 @@ def build(lang: str) -> str:
 
     a(divider)
     a(h2("mail", sc[5]) + "\n")
-    a(f'{ic("linkedin", 18)} <a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a>  \n'
-      f'{ic("github", 18)} <a href="{GH}">github.com/Prabovn7</a>\n')
+    a('<div align="center">\n')
+    a(f'<a href="https://www.linkedin.com/in/pablov-santos-dev">{ic("linkedin", 40, "LinkedIn")}</a> &nbsp; '
+      f'<a href="{GH}">{ic("github", 40, "GitHub")}</a>\n')
+    a("</div>\n")
     return "\n".join(out) + "\n"
 
 
