@@ -61,7 +61,7 @@ STR = {
                      "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA.",
         "stack_text": "Stack as text",
         "stack_labels": ("Languages", "Backend and data", "Tools"),
-        "activity_alt": "Animated bar chart of my GitHub contributions over the last 30 days, updated daily.",
+        "activity_alt": "Animated grid of my GitHub contributions over the last 30 days, updated daily.",
         "background": "Before moving into backend development I worked in corporate operations at an insurance "
                       "company, handling contracts, documentation and corporate systems. That shaped how I build: "
                       "clear rules, traceable data and well-defined processes.",
@@ -108,7 +108,7 @@ STR = {
                      "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA.",
         "stack_text": "Stack em texto",
         "stack_labels": ("Linguagens", "Backend e dados", "Ferramentas"),
-        "activity_alt": "Gráfico animado das minhas contribuições no GitHub nos últimos 30 dias, atualizado diariamente.",
+        "activity_alt": "Grade animada das minhas contribuições no GitHub nos últimos 30 dias, atualizada diariamente.",
         "background": "Antes de migrar para backend, trabalhei com operações corporativas em uma seguradora, lidando "
                       "com contratos, documentação e sistemas corporativos. Isso moldou meu jeito de construir: "
                       "regras claras, dados rastreáveis e processos bem definidos.",

@@ -94,7 +94,7 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 <img src="assets/stats/languages.svg" alt="Linguagens mais usadas nos meus repositórios públicos, por bytes de código." width="100%">
 
-<img src="assets/activity.svg" alt="Gráfico animado das minhas contribuições no GitHub nos últimos 30 dias, atualizado diariamente." width="100%">
+<img src="assets/activity.svg" alt="Grade animada das minhas contribuições no GitHub nos últimos 30 dias, atualizada diariamente." width="100%">
 
 </div>
 
