@@ -1,4 +1,4 @@
-"""Generates assets/activity.svg: an animated, monochrome contribution grid.
+"""Generates assets/activity.svg: an animated 30-day contribution bar chart.
 
 CLI:  python gen_activity.py --user Prabovn7 --out assets/activity.svg
       (reads GitHub GraphQL via `gh api graphql`; needs GH_TOKEN/GITHUB_TOKEN)
@@ -17,7 +17,6 @@ from pathlib import Path
 from build_svgs import FONT, icon
 from palette import BLUE, EDGE, ICE, MUTED, PALE, PANEL, PERI, TEXT
 
-CELL, GAP, LEFT, TOP = 15, 4, 52, 84
 LEVEL_FILL = [EDGE, BLUE, PERI, ICE, PALE]
 
 
@@ -36,36 +35,34 @@ def _streak(counts: dict[date, int], today: date) -> int:
     return n
 
 
-def build_activity_svg(counts: dict[date, int], weeks: int = 26, today: date | None = None,
+def build_activity_svg(counts: dict[date, int], days: int = 30, today: date | None = None,
                        note: str | None = None) -> str:
+    """Animated bar chart of the last `days` days of contributions (one bar per day, today on the right)."""
     today = today or date.today()
-    # Sunday-first rows; the last column holds the current week.
-    today_row = (today.weekday() + 1) % 7
-    first = today - timedelta(days=today_row + 7 * (weeks - 1))
-    days = [first + timedelta(days=i) for i in range(weeks * 7)]
-    days = [d for d in days if d <= today]
-    peak = max((counts.get(d, 0) for d in days), default=0)
-    total = sum(counts.get(d, 0) for d in days)
+    span = [today - timedelta(days=days - 1 - i) for i in range(days)]
+    peak = max((counts.get(d, 0) for d in span), default=0)
+    total = sum(counts.get(d, 0) for d in span)
     streak = _streak(counts, today)
 
-    width = LEFT + weeks * (CELL + GAP) + 14
-    height = TOP + 7 * (CELL + GAP) + 54
+    width, height, left, base, ch = 560, 250, 24, 208, 104
+    slot = (width - 2 * left) / days
+    bw = slot - 5
+    label = f"{total} contributions in the last {days} days"
     css = [
         f"text{{font-family:{FONT}}}",
         f".t{{font-size:18px;font-weight:600;fill:{TEXT}}}",
         f".s{{font-size:13px;fill:{PERI}}}",
         f".k{{font-size:11px;fill:{MUTED}}}",
-        ".cell{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}",
-        "@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}",
-        f".today{{stroke:{ICE};stroke-width:1.5;animation:pop .5s ease-out both,pulse 2.4s ease-in-out infinite}}",
-        "@keyframes pulse{0%,100%{stroke-opacity:1}50%{stroke-opacity:.15}}",
+        ".bar{transform-box:fill-box;transform-origin:bottom;animation:grow .8s cubic-bezier(.2,.8,.2,1) both}",
+        "@keyframes grow{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}",
+        f".today{{stroke:{PALE};stroke-width:1.5;animation:grow .8s cubic-bezier(.2,.8,.2,1) both,pulse 2.4s ease-in-out infinite}}",
+        "@keyframes pulse{0%,100%{stroke-opacity:1}50%{stroke-opacity:.2}}",
         ".flame{transform-box:fill-box;transform-origin:center bottom;animation:flicker 1.8s ease-in-out infinite}",
         "@keyframes flicker{0%,100%{transform:scale(1);opacity:1}40%{transform:scale(1.12,.94);opacity:.8}"
         "70%{transform:scale(.95,1.08);opacity:1}}",
     ] + [f".l{i}{{fill:{c}}}" for i, c in enumerate(LEVEL_FILL)] + [
-        "@media (prefers-reduced-motion: reduce){.cell,.today{animation:none;opacity:1}.flame{animation:none}}",
+        "@media (prefers-reduced-motion: reduce){.bar,.today{animation:none}.flame{animation:none}}",
     ]
-    label = f"{total} contributions in the last {weeks} weeks"
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
         f'role="img" aria-label="Git activity: {label}, current streak {streak} days">',
@@ -74,29 +71,27 @@ def build_activity_svg(counts: dict[date, int], weeks: int = 26, today: date | N
         f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="16" fill="{PANEL}" stroke="{EDGE}"/>',
         icon("activity", 24, 22, 22, ICE),
         '<text class="t" x="54" y="40">Git activity</text>',
-        f'<text class="s" x="24" y="64">{escape(label)}</text>',
-        f'<g class="flame">{icon("flame", width - 190, 46, 18, PERI)}</g>',
-        f'<text class="s" x="{width - 168}" y="60">{streak}-day streak</text>',
+        f'<text class="s" x="24" y="68">{escape(label)}</text>',
+        f'<g class="flame">{icon("flame", width - 150, 24, 18, PERI)}</g>',
+        f'<text class="s" x="{width - 128}" y="38">{streak}-day streak</text>',
+        f'<line x1="{left}" y1="{base + 4}" x2="{width - left}" y2="{base + 4}" stroke="{EDGE}"/>',
     ]
-    for r, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
-        parts.append(f'<text class="k" x="24" y="{TOP + r * (CELL + GAP) + 12}">{name}</text>')
-    for d in days:
-        col = (d - first).days // 7
-        row = (d.weekday() + 1) % 7
+    for i, d in enumerate(span):
         n = counts.get(d, 0)
         lvl = _level(n, peak)
+        h = 5 if n <= 0 else max(8, round(ch * n / peak))
+        x = left + i * slot + 2.5
+        cls = f"bar l{lvl}" + (" today" if d == today else "")
         parts.append(
-            f'<rect class="cell l{lvl}{" today" if d == today else ""}" data-level="{lvl}" data-date="{d.isoformat()}" '
-            f'x="{LEFT + col * (CELL + GAP)}" y="{TOP + row * (CELL + GAP)}" width="{CELL}" height="{CELL}" rx="3" '
-            f'style="animation-delay:{col * 0.035:.2f}s"><title>{d.isoformat()}: {n}</title></rect>'
+            f'<rect class="{cls}" data-level="{lvl}" data-date="{d.isoformat()}" x="{x:.1f}" y="{base - h}" '
+            f'width="{bw:.1f}" height="{h}" rx="3" style="animation-delay:{i * 0.03:.2f}s">'
+            f'<title>{d.isoformat()}: {n}</title></rect>'
         )
-    ly = height - 28
+    parts.append(f'<text class="k" x="{left}" y="{base + 22}">{span[0].strftime("%b %d")}</text>')
+    parts.append(f'<text class="k" x="{width // 2}" y="{base + 22}" text-anchor="middle">{span[days // 2].strftime("%b %d")}</text>')
+    parts.append(f'<text class="k" x="{width - left}" y="{base + 22}" text-anchor="end">Today</text>')
     if note:
-        parts.append(f'<text class="k" x="24" y="{ly + 10}">{escape(note)}</text>')
-    parts.append(f'<text class="k" x="{width - 168}" y="{ly + 10}">Less</text>')
-    for i, c in enumerate(LEVEL_FILL):
-        parts.append(f'<rect x="{width - 136 + i * 19}" y="{ly}" width="{CELL}" height="{CELL}" rx="3" fill="{c}"/>')
-    parts.append(f'<text class="k" x="{width - 36}" y="{ly + 10}">More</text>')
+        parts.append(f'<text class="k" x="{left}" y="{height - 6}">{escape(note)}</text>')
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
 
@@ -140,7 +135,6 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--user", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--weeks", type=int, default=26)
     ap.add_argument("--source", choices=["graphql", "events", "sample"], default="graphql")
     a = ap.parse_args()
     note = None
@@ -148,7 +142,7 @@ def main() -> None:
         counts, note = sample_counts(), "Preview data - replaced daily by the GitHub Action"
     else:
         counts = fetch_graphql(a.user) if a.source == "graphql" else fetch_events(a.user)
-    Path(a.out).write_text(build_activity_svg(counts, a.weeks, note=note), encoding="utf-8")
+    Path(a.out).write_text(build_activity_svg(counts, note=note), encoding="utf-8")
     print(f"wrote {a.out}: {sum(counts.values())} contributions")
 
 
