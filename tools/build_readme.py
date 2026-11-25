@@ -58,7 +58,7 @@ STR = {
             ("terminal", "rpg-python", "rpg-python", "Object-oriented exercise: abstraction, inheritance and polymorphism in a small RPG."),
         ],
         "stack_alt": "Animated tech stack: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, "
-                     "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code.",
+                     "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA.",
         "stack_text": "Stack as text",
         "stack_labels": ("Languages", "Backend and data", "Tools"),
         "activity_alt": "Animated grid of my recent GitHub contribution activity, updated daily.",
@@ -105,7 +105,7 @@ STR = {
             ("terminal", "rpg-python", "rpg-python", "Exercício de orientação a objetos: abstração, herança e polimorfismo em um RPG simples."),
         ],
         "stack_alt": "Stack animada: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, "
-                     "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code.",
+                     "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA.",
         "stack_text": "Stack em texto",
         "stack_labels": ("Linguagens", "Backend e dados", "Ferramentas"),
         "activity_alt": "Grade animada da minha atividade recente de contribuições no GitHub, atualizada diariamente.",
@@ -119,7 +119,7 @@ STR = {
 STACK_LINES = (
     "Python, Java, C, JavaScript, TypeScript",
     "FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis",
-    "Docker, Git, GitHub, GitHub Actions, VS Code",
+    "Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA",
 )
 
 CARD_TECH = {

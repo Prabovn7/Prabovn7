@@ -72,7 +72,7 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 <div align="center">
 
-<img src="assets/stack.svg" alt="Animated tech stack: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code." width="100%">
+<img src="assets/stack.svg" alt="Animated tech stack: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA." width="100%">
 
 </div>
 
@@ -80,7 +80,7 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 - **Languages:** Python, Java, C, JavaScript, TypeScript
 - **Backend and data:** FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis
-- **Tools:** Docker, Git, GitHub, GitHub Actions, VS Code
+- **Tools:** Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA
 
 </details>
 

@@ -72,7 +72,7 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 <div align="center">
 
-<img src="assets/stack.svg" alt="Stack animada: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code." width="100%">
+<img src="assets/stack.svg" alt="Stack animada: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA." width="100%">
 
 </div>
 
@@ -80,7 +80,7 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 - **Linguagens:** Python, Java, C, JavaScript, TypeScript
 - **Backend e dados:** FastAPI, Flask, Spring, Node.js, PostgreSQL, SQLite, Redis
-- **Ferramentas:** Docker, Git, GitHub, GitHub Actions, VS Code
+- **Ferramentas:** Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA
 
 </details>
 

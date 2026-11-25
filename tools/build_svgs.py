@@ -20,7 +20,7 @@ STACK = [
     ("Backend & data", PERI, [("FastAPI", "fastapi"), ("Flask", "flask"), ("Spring", "spring"), ("Node.js", "nodejs"),
                               ("PostgreSQL", "postgresql"), ("SQLite", "sqlite"), ("Redis", "redis")]),
     ("Tools", PALE, [("Docker", "docker"), ("Git", "git"), ("GitHub", "github"), ("GitHub Actions", "github-actions"),
-                     ("VS Code", "vscode")]),
+                     ("VS Code", "vscode"), ("IntelliJ IDEA", "intellij")]),
 ]
 
 
@@ -42,7 +42,7 @@ def build_stack() -> str:
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" role="img" '
         'aria-label="Tech stack: Python, Java, C, JavaScript, TypeScript; FastAPI, Flask, Spring, Node.js, '
-        'PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code">',
+        'PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA">',
         "<title>Tech stack</title>",
         "<defs>",
         '<linearGradient id="gradx" x1="0" x2="1" y1="0" y2="0">'
