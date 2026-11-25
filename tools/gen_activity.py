@@ -1,4 +1,4 @@
-"""Generates assets/activity.svg: an animated 30-day contribution bar chart.
+"""Generates assets/activity.svg: an animated 30-day contribution grid.
 
 CLI:  python gen_activity.py --user Prabovn7 --out assets/activity.svg
       (reads GitHub GraphQL via `gh api graphql`; needs GH_TOKEN/GITHUB_TOKEN)
@@ -37,32 +37,35 @@ def _streak(counts: dict[date, int], today: date) -> int:
 
 def build_activity_svg(counts: dict[date, int], days: int = 30, today: date | None = None,
                        note: str | None = None) -> str:
-    """Animated bar chart of the last `days` days of contributions (one bar per day, today on the right)."""
+    """Animated contribution grid for the last `days` days (Sunday-first rows, today in the last column)."""
     today = today or date.today()
     span = [today - timedelta(days=days - 1 - i) for i in range(days)]
+    start = span[0] - timedelta(days=(span[0].weekday() + 1) % 7)  # Sunday on/before the first day
+    cols = (today - start).days // 7 + 1
     peak = max((counts.get(d, 0) for d in span), default=0)
     total = sum(counts.get(d, 0) for d in span)
     streak = _streak(counts, today)
 
-    width, height, left, base, ch = 560, 250, 24, 208, 104
-    slot = (width - 2 * left) / days
-    bw = slot - 5
-    label = f"{total} contributions in the last {days} days"
+    cell, gap, left, top, width = 30, 6, 56, 84, 560
+    height = top + 7 * (cell + gap) + 50
     css = [
         f"text{{font-family:{FONT}}}",
         f".t{{font-size:18px;font-weight:600;fill:{TEXT}}}",
         f".s{{font-size:13px;fill:{PERI}}}",
         f".k{{font-size:11px;fill:{MUTED}}}",
-        ".bar{transform-box:fill-box;transform-origin:bottom;animation:grow .8s cubic-bezier(.2,.8,.2,1) both}",
-        "@keyframes grow{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}",
-        f".today{{stroke:{PALE};stroke-width:1.5;animation:grow .8s cubic-bezier(.2,.8,.2,1) both,pulse 2.4s ease-in-out infinite}}",
-        "@keyframes pulse{0%,100%{stroke-opacity:1}50%{stroke-opacity:.2}}",
+        f".n{{font-size:44px;font-weight:700;fill:{TEXT}}}",
+        ".cell{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}",
+        "@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}",
+        f".today{{stroke:{ICE};stroke-width:1.5;animation:pop .5s ease-out both,pulse 2.4s ease-in-out infinite}}",
+        "@keyframes pulse{0%,100%{stroke-opacity:1}50%{stroke-opacity:.15}}",
         ".flame{transform-box:fill-box;transform-origin:center bottom;animation:flicker 1.8s ease-in-out infinite}",
         "@keyframes flicker{0%,100%{transform:scale(1);opacity:1}40%{transform:scale(1.12,.94);opacity:.8}"
         "70%{transform:scale(.95,1.08);opacity:1}}",
     ] + [f".l{i}{{fill:{c}}}" for i, c in enumerate(LEVEL_FILL)] + [
-        "@media (prefers-reduced-motion: reduce){.bar,.today{animation:none}.flame{animation:none}}",
+        "@media (prefers-reduced-motion: reduce){.cell,.today{animation:none;opacity:1}.flame{animation:none}}",
     ]
+    label = f"{total} contributions in the last {days} days"
+    rx = left + cols * (cell + gap) + 24  # right-hand stats column
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
         f'role="img" aria-label="Git activity: {label}, current streak {streak} days">',
@@ -71,27 +74,31 @@ def build_activity_svg(counts: dict[date, int], days: int = 30, today: date | No
         f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="16" fill="{PANEL}" stroke="{EDGE}"/>',
         icon("activity", 24, 22, 22, ICE),
         '<text class="t" x="54" y="40">Git activity</text>',
-        f'<text class="s" x="24" y="68">{escape(label)}</text>',
-        f'<g class="flame">{icon("flame", width - 150, 24, 18, PERI)}</g>',
-        f'<text class="s" x="{width - 128}" y="38">{streak}-day streak</text>',
-        f'<line x1="{left}" y1="{base + 4}" x2="{width - left}" y2="{base + 4}" stroke="{EDGE}"/>',
+        f'<text class="s" x="24" y="64">Last {days} days</text>',
+        f'<text class="n" x="{rx}" y="{top + 56}">{total}</text>',
+        f'<text class="s" x="{rx}" y="{top + 80}">contributions</text>',
+        f'<g class="flame">{icon("flame", rx, top + 112, 20, PERI)}</g>',
+        f'<text class="s" x="{rx + 28}" y="{top + 127}">{streak}-day streak</text>',
     ]
-    for i, d in enumerate(span):
+    for r, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
+        parts.append(f'<text class="k" x="24" y="{top + r * (cell + gap) + 19}">{name}</text>')
+    for d in span:
+        col = (d - start).days // 7
+        row = (d.weekday() + 1) % 7
         n = counts.get(d, 0)
         lvl = _level(n, peak)
-        h = 5 if n <= 0 else max(8, round(ch * n / peak))
-        x = left + i * slot + 2.5
-        cls = f"bar l{lvl}" + (" today" if d == today else "")
         parts.append(
-            f'<rect class="{cls}" data-level="{lvl}" data-date="{d.isoformat()}" x="{x:.1f}" y="{base - h}" '
-            f'width="{bw:.1f}" height="{h}" rx="3" style="animation-delay:{i * 0.03:.2f}s">'
-            f'<title>{d.isoformat()}: {n}</title></rect>'
+            f'<rect class="cell l{lvl}{" today" if d == today else ""}" data-level="{lvl}" data-date="{d.isoformat()}" '
+            f'x="{left + col * (cell + gap)}" y="{top + row * (cell + gap)}" width="{cell}" height="{cell}" rx="6" '
+            f'style="animation-delay:{(d - span[0]).days * 0.03:.2f}s"><title>{d.isoformat()}: {n}</title></rect>'
         )
-    parts.append(f'<text class="k" x="{left}" y="{base + 22}">{span[0].strftime("%b %d")}</text>')
-    parts.append(f'<text class="k" x="{width // 2}" y="{base + 22}" text-anchor="middle">{span[days // 2].strftime("%b %d")}</text>')
-    parts.append(f'<text class="k" x="{width - left}" y="{base + 22}" text-anchor="end">Today</text>')
+    ly = height - 26
     if note:
-        parts.append(f'<text class="k" x="{left}" y="{height - 6}">{escape(note)}</text>')
+        parts.append(f'<text class="k" x="24" y="{ly + 10}">{escape(note)}</text>')
+    parts.append(f'<text class="k" x="{width - 168}" y="{ly + 10}">Less</text>')
+    for i, c in enumerate(LEVEL_FILL):
+        parts.append(f'<rect x="{width - 136 + i * 19}" y="{ly}" width="15" height="15" rx="3" fill="{c}"/>')
+    parts.append(f'<text class="k" x="{width - 36}" y="{ly + 10}">More</text>')
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
 
