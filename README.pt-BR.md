@@ -34,13 +34,13 @@ Estudante de Engenharia de Software com foco em desenvolvimento backend. Constru
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/bus-ticket-api"><img src="assets/icons/bus.svg" width="24" height="24" alt="Bus Ticket API"></a> <b>Bus Ticket API</b> <sub>· em andamento</sub><br>
+<a href="https://github.com/Prabovn7/bus-ticket-api"><img src="assets/icons/bus.svg" width="24" height="24" alt="Bus Ticket API"></a> <b><a href="https://github.com/Prabovn7/bus-ticket-api">Bus Ticket API</a></b> <sub>· em andamento</sub><br>
 <img src="assets/bar-1.svg" width="100%" height="6" alt=""><br>
 Venda de passagens de ônibus com reserva de assento por trecho, feita para evitar reserva duplicada em requisições concorrentes.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> <img src="assets/icons/fastapi.svg" width="20" height="20" alt="FastAPI"> <img src="assets/icons/postgresql.svg" width="20" height="20" alt="PostgreSQL"> <img src="assets/icons/redis.svg" width="20" height="20" alt="Redis"> &nbsp; <a href="https://github.com/Prabovn7/bus-ticket-api"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Bus Ticket API"></a>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/delivery-api-fastapi"><img src="assets/icons/truck.svg" width="24" height="24" alt="Delivery API"></a> <b>Delivery API</b><br>
+<a href="https://github.com/Prabovn7/delivery-api-fastapi"><img src="assets/icons/truck.svg" width="24" height="24" alt="Delivery API"></a> <b><a href="https://github.com/Prabovn7/delivery-api-fastapi">Delivery API</a></b><br>
 <img src="assets/bar-2.svg" width="100%" height="6" alt=""><br>
 API FastAPI com tokens JWT de acesso e refresh, gerenciamento de pedidos, SQLAlchemy e testes automatizados.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> <img src="assets/icons/fastapi.svg" width="20" height="20" alt="FastAPI"> <img src="assets/icons/sqlalchemy.svg" width="20" height="20" alt="SQLAlchemy"> <img src="assets/icons/sqlite.svg" width="20" height="20" alt="SQLite"> <img src="assets/icons/jwt.svg" width="20" height="20" alt="JWT"> <img src="assets/icons/pytest.svg" width="20" height="20" alt="pytest"> &nbsp; <a href="https://github.com/Prabovn7/delivery-api-fastapi"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Delivery API"></a>
@@ -48,13 +48,13 @@ API FastAPI com tokens JWT de acesso e refresh, gerenciamento de pedidos, SQLAlc
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/Ferramenta-de-tracking"><img src="assets/icons/chart.svg" width="24" height="24" alt="Ferramenta de Tracking"></a> <b>Ferramenta de Tracking</b><br>
+<a href="https://github.com/Prabovn7/Ferramenta-de-tracking"><img src="assets/icons/chart.svg" width="24" height="24" alt="Ferramenta de Tracking"></a> <b><a href="https://github.com/Prabovn7/Ferramenta-de-tracking">Ferramenta de Tracking</a></b><br>
 <img src="assets/bar-3.svg" width="100%" height="6" alt=""><br>
 Ferramenta em Python que distribui cases entre a equipe, acompanha em Excel e gera relatórios e dashboard gerencial.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> &nbsp; <a href="https://github.com/Prabovn7/Ferramenta-de-tracking"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Ferramenta de Tracking"></a>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/api-clima"><img src="assets/icons/weather.svg" width="24" height="24" alt="Weather CLI"></a> <b>Weather CLI</b><br>
+<a href="https://github.com/Prabovn7/api-clima"><img src="assets/icons/weather.svg" width="24" height="24" alt="Weather CLI"></a> <b><a href="https://github.com/Prabovn7/api-clima">Weather CLI</a></b><br>
 <img src="assets/bar-4.svg" width="100%" height="6" alt=""><br>
 Aplicação de linha de comando que consulta o clima em tempo real pela WeatherAPI.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> <img src="assets/icons/terminal.svg" width="20" height="20" alt="CLI"> &nbsp; <a href="https://github.com/Prabovn7/api-clima"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Weather CLI"></a>
@@ -64,7 +64,7 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 **Mais projetos**
 
-- <a href="https://github.com/Prabovn7/rpg-python"><img src="assets/icons/terminal.svg" width="20" height="20" alt="rpg-python"></a> **rpg-python**: Exercício de orientação a objetos: abstração, herança e polimorfismo em um RPG simples.
+- <a href="https://github.com/Prabovn7/rpg-python"><img src="assets/icons/terminal.svg" width="20" height="20" alt="rpg-python"></a> **<a href="https://github.com/Prabovn7/rpg-python">rpg-python</a>**: Exercício de orientação a objetos: abstração, herança e polimorfismo em um RPG simples.
 
 <div align="center"><img src="assets/scene-divider.svg" width="100%" alt=""></div>
 
@@ -117,6 +117,8 @@ Antes de migrar para backend, trabalhei com operações corporativas em uma segu
 <div align="center">
 
 <a href="https://www.linkedin.com/in/pablov-santos-dev"><img src="assets/icons/linkedin.svg" width="40" height="40" alt="LinkedIn"></a> &nbsp; <a href="https://github.com/Prabovn7"><img src="assets/icons/github.svg" width="40" height="40" alt="GitHub"></a>
+
+<a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a> &nbsp;·&nbsp; <a href="https://github.com/Prabovn7">github.com/Prabovn7</a>
 
 </div>
 

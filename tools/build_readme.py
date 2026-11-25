@@ -175,14 +175,14 @@ def build(lang: str) -> str:
         for k, (icon, title, repo, wip, desc) in enumerate(s["cards"][row:row + 2]):
             badge = f" <sub>· {s['progress']}</sub>" if wip else ""
             a(f'<td width="50%" valign="top">\n'
-              f'<a href="{GH}/{repo}">{ic(icon, 24, title)}</a> <b>{title}</b>{badge}<br>\n'
+              f'<a href="{GH}/{repo}">{ic(icon, 24, title)}</a> <b><a href="{GH}/{repo}">{title}</a></b>{badge}<br>\n'
               f'{deco(f"bar-{row + k + 1}.svg", "100%", "6")}<br>\n'
               f'{desc}<br><br>\n{tech(*CARD_TECH[repo])} &nbsp; <a href="{GH}/{repo}">{ic("github", 20, "GitHub: " + title)}</a>\n</td>')
         a("</tr>")
     a("</table>\n")
     a(f"**{s['more']}**\n")
     for icon, title, repo, desc in s["more_items"]:
-        a(f'- <a href="{GH}/{repo}">{ic(icon, 20, title)}</a> **{title}**: {desc}')
+        a(f'- <a href="{GH}/{repo}">{ic(icon, 20, title)}</a> **<a href="{GH}/{repo}">{title}</a>**: {desc}')
     a("")
 
     a(divider)
@@ -217,6 +217,8 @@ def build(lang: str) -> str:
     a('<div align="center">\n')
     a(f'<a href="https://www.linkedin.com/in/pablov-santos-dev">{ic("linkedin", 40, "LinkedIn")}</a> &nbsp; '
       f'<a href="{GH}">{ic("github", 40, "GitHub")}</a>\n')
+    a(f'<a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a> &nbsp;·&nbsp; '
+      f'<a href="{GH}">github.com/Prabovn7</a>\n')
     a("</div>\n")
     return "\n".join(out) + "\n"
 

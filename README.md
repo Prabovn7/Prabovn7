@@ -34,13 +34,13 @@ Software Engineering student focused on backend development. I build APIs with a
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/bus-ticket-api"><img src="assets/icons/bus.svg" width="24" height="24" alt="Bus Ticket API"></a> <b>Bus Ticket API</b> <sub>· in progress</sub><br>
+<a href="https://github.com/Prabovn7/bus-ticket-api"><img src="assets/icons/bus.svg" width="24" height="24" alt="Bus Ticket API"></a> <b><a href="https://github.com/Prabovn7/bus-ticket-api">Bus Ticket API</a></b> <sub>· in progress</sub><br>
 <img src="assets/bar-1.svg" width="100%" height="6" alt=""><br>
 Bus ticket sales with segment-based seat reservation, designed to prevent double-booking under concurrent requests.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> <img src="assets/icons/fastapi.svg" width="20" height="20" alt="FastAPI"> <img src="assets/icons/postgresql.svg" width="20" height="20" alt="PostgreSQL"> <img src="assets/icons/redis.svg" width="20" height="20" alt="Redis"> &nbsp; <a href="https://github.com/Prabovn7/bus-ticket-api"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Bus Ticket API"></a>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/delivery-api-fastapi"><img src="assets/icons/truck.svg" width="24" height="24" alt="Delivery API"></a> <b>Delivery API</b><br>
+<a href="https://github.com/Prabovn7/delivery-api-fastapi"><img src="assets/icons/truck.svg" width="24" height="24" alt="Delivery API"></a> <b><a href="https://github.com/Prabovn7/delivery-api-fastapi">Delivery API</a></b><br>
 <img src="assets/bar-2.svg" width="100%" height="6" alt=""><br>
 FastAPI service with JWT access and refresh tokens, order management, SQLAlchemy and automated tests.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> <img src="assets/icons/fastapi.svg" width="20" height="20" alt="FastAPI"> <img src="assets/icons/sqlalchemy.svg" width="20" height="20" alt="SQLAlchemy"> <img src="assets/icons/sqlite.svg" width="20" height="20" alt="SQLite"> <img src="assets/icons/jwt.svg" width="20" height="20" alt="JWT"> <img src="assets/icons/pytest.svg" width="20" height="20" alt="pytest"> &nbsp; <a href="https://github.com/Prabovn7/delivery-api-fastapi"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Delivery API"></a>
@@ -48,13 +48,13 @@ FastAPI service with JWT access and refresh tokens, order management, SQLAlchemy
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/Ferramenta-de-tracking"><img src="assets/icons/chart.svg" width="24" height="24" alt="Case Tracking Tool"></a> <b>Case Tracking Tool</b><br>
+<a href="https://github.com/Prabovn7/Ferramenta-de-tracking"><img src="assets/icons/chart.svg" width="24" height="24" alt="Case Tracking Tool"></a> <b><a href="https://github.com/Prabovn7/Ferramenta-de-tracking">Case Tracking Tool</a></b><br>
 <img src="assets/bar-3.svg" width="100%" height="6" alt=""><br>
 Python tool that distributes cases across a team, tracks them in Excel and generates reports and a manager dashboard.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> &nbsp; <a href="https://github.com/Prabovn7/Ferramenta-de-tracking"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Case Tracking Tool"></a>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/Prabovn7/api-clima"><img src="assets/icons/weather.svg" width="24" height="24" alt="Weather CLI"></a> <b>Weather CLI</b><br>
+<a href="https://github.com/Prabovn7/api-clima"><img src="assets/icons/weather.svg" width="24" height="24" alt="Weather CLI"></a> <b><a href="https://github.com/Prabovn7/api-clima">Weather CLI</a></b><br>
 <img src="assets/bar-4.svg" width="100%" height="6" alt=""><br>
 Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 <img src="assets/icons/python.svg" width="20" height="20" alt="Python"> <img src="assets/icons/terminal.svg" width="20" height="20" alt="CLI"> &nbsp; <a href="https://github.com/Prabovn7/api-clima"><img src="assets/icons/github.svg" width="20" height="20" alt="GitHub: Weather CLI"></a>
@@ -64,7 +64,7 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 **More projects**
 
-- <a href="https://github.com/Prabovn7/rpg-python"><img src="assets/icons/terminal.svg" width="20" height="20" alt="rpg-python"></a> **rpg-python**: Object-oriented exercise: abstraction, inheritance and polymorphism in a small RPG.
+- <a href="https://github.com/Prabovn7/rpg-python"><img src="assets/icons/terminal.svg" width="20" height="20" alt="rpg-python"></a> **<a href="https://github.com/Prabovn7/rpg-python">rpg-python</a>**: Object-oriented exercise: abstraction, inheritance and polymorphism in a small RPG.
 
 <div align="center"><img src="assets/scene-divider.svg" width="100%" alt=""></div>
 
@@ -117,6 +117,8 @@ Before moving into backend development I worked in corporate operations at an in
 <div align="center">
 
 <a href="https://www.linkedin.com/in/pablov-santos-dev"><img src="assets/icons/linkedin.svg" width="40" height="40" alt="LinkedIn"></a> &nbsp; <a href="https://github.com/Prabovn7"><img src="assets/icons/github.svg" width="40" height="40" alt="GitHub"></a>
+
+<a href="https://www.linkedin.com/in/pablov-santos-dev">linkedin.com/in/pablov-santos-dev</a> &nbsp;·&nbsp; <a href="https://github.com/Prabovn7">github.com/Prabovn7</a>
 
 </div>
 
