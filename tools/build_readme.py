@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GH = "https://github.com/Prabovn7"
+PAGES = "https://prabovn7.github.io/Prabovn7/"
 
 
 def ic(name: str, size: int = 18, alt: str = "") -> str:
@@ -26,6 +27,7 @@ STR = {
         "role": "Backend Software Engineer",
         "status": "Open to junior and internship backend roles",
         "other_lang": ("README.pt-BR.md", "Português (BR)"),
+        "activity_hint": "Tap the grid to explore each day.",
         "roles_alt": "Building APIs, architecture and security (animated line cycling through the three words).",
         "overview_alt": "GitHub overview: public repositories, stars received, followers and languages.",
         "languages_alt": "Most used languages across my public repositories, by bytes of code.",
@@ -61,7 +63,7 @@ STR = {
                      "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA.",
         "stack_text": "Stack as text",
         "stack_labels": ("Languages", "Backend and data", "Tools"),
-        "activity_alt": "Animated grid of my GitHub contributions over the last 30 days, updated daily.",
+        "activity_alt": "Animated grid of my GitHub contributions over the last 26 weeks, updated daily.",
         "background": "Before moving into backend development I worked in corporate operations at an insurance "
                       "company, handling contracts, documentation and corporate systems. That shaped how I build: "
                       "clear rules, traceable data and well-defined processes.",
@@ -73,6 +75,7 @@ STR = {
         "role": "Backend Software Engineer",
         "status": "Aberto a vagas de estágio e júnior em backend",
         "other_lang": ("README.md", "English"),
+        "activity_hint": "Toque na grade para explorar cada dia.",
         "roles_alt": "Construindo APIs, arquitetura e segurança (linha animada alternando as três palavras).",
         "overview_alt": "Resumo do GitHub: repositórios públicos, estrelas recebidas, seguidores e linguagens.",
         "languages_alt": "Linguagens mais usadas nos meus repositórios públicos, por bytes de código.",
@@ -108,7 +111,7 @@ STR = {
                      "PostgreSQL, SQLite, Redis; Docker, Git, GitHub, GitHub Actions, VS Code, IntelliJ IDEA.",
         "stack_text": "Stack em texto",
         "stack_labels": ("Linguagens", "Backend e dados", "Ferramentas"),
-        "activity_alt": "Grade animada das minhas contribuições no GitHub nos últimos 30 dias, atualizada diariamente.",
+        "activity_alt": "Grade animada das minhas contribuições no GitHub nas últimas 26 semanas, atualizada diariamente.",
         "background": "Antes de migrar para backend, trabalhei com operações corporativas em uma seguradora, lidando "
                       "com contratos, documentação e sistemas corporativos. Isso moldou meu jeito de construir: "
                       "regras claras, dados rastreáveis e processos bem definidos.",
@@ -198,7 +201,8 @@ def build(lang: str) -> str:
     a('<div align="center">\n')
     a(f'<img src="assets/stats/overview.svg" alt="{s["overview_alt"]}" width="100%">\n')
     a(f'<img src="assets/stats/languages.svg" alt="{s["languages_alt"]}" width="100%">\n')
-    a(f'<img src="assets/activity.svg" alt="{s["activity_alt"]}" width="100%">\n')
+    a(f'<a href="{PAGES}"><img src="assets/activity.svg" alt="{s["activity_alt"]}" width="100%"></a>\n')
+    a(f'<sub>{s["activity_hint"]}</sub>\n')
     a("</div>\n")
 
     a(divider)
