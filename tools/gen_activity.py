@@ -179,15 +179,6 @@ def build_months_svg(counts: dict[date, int], today: date | None = None, months:
     return "\n".join(parts) + "\n"
 
 
-def activity_json(counts: dict[date, int], weeks: int = 26, today: date | None = None) -> str:
-    """Per-day counts for the interactive page (docs/index.html reads docs/activity.json)."""
-    today = today or date.today()
-    first = today - timedelta(days=((today.weekday() + 1) % 7) + 7 * (weeks - 1))
-    days = {(first + timedelta(days=i)).isoformat(): counts.get(first + timedelta(days=i), 0)
-            for i in range(weeks * 7) if first + timedelta(days=i) <= today}
-    return json.dumps({"updated": today.isoformat(), "total": sum(days.values()), "days": days}, indent=1)
-
-
 def fetch_graphql(user: str) -> dict[date, int]:
     q = ("query($u:String!){user(login:$u){contributionsCollection{contributionCalendar{weeks{contributionDays"
          "{date contributionCount}}}}}}")
@@ -229,7 +220,6 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     ap.add_argument("--weeks", type=int, default=26)
     ap.add_argument("--months", help="also write the per-month chart SVG")
-    ap.add_argument("--json", help="also write per-day data for the interactive page")
     ap.add_argument("--source", choices=["graphql", "events", "sample"], default="graphql")
     a = ap.parse_args()
     note = None
@@ -240,9 +230,6 @@ def main() -> None:
     Path(a.out).write_text(build_activity_svg(counts, a.weeks, note=note), encoding="utf-8")
     if a.months:
         Path(a.months).write_text(build_months_svg(counts), encoding="utf-8")
-    if a.json:
-        Path(a.json).parent.mkdir(parents=True, exist_ok=True)
-        Path(a.json).write_text(activity_json(counts, a.weeks), encoding="utf-8")
     print(f"wrote {a.out}: {sum(counts.values())} contributions")
 
 

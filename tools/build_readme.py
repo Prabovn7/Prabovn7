@@ -5,7 +5,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GH = "https://github.com/Prabovn7"
-PAGES = "https://prabovn7.github.io/Prabovn7/"
 
 
 def ic(name: str, size: int = 18, alt: str = "") -> str:
@@ -27,7 +26,6 @@ STR = {
         "role": "Backend Software Engineer",
         "status": "Open to junior and internship backend roles",
         "other_lang": ("README.pt-BR.md", "Português (BR)"),
-        "activity_hint": "Tap the grid to explore each day.",
         "months_summary": "Contributions by month",
         "months_alt": "Animated bar chart of my GitHub contributions per month over the last six months.",
         "roles_alt": "Building APIs, architecture and security (animated line cycling through the three words).",
@@ -77,7 +75,6 @@ STR = {
         "role": "Backend Software Engineer",
         "status": "Aberto a vagas de estágio e júnior em backend",
         "other_lang": ("README.md", "English"),
-        "activity_hint": "Toque na grade para explorar cada dia.",
         "months_summary": "Contribuições por mês",
         "months_alt": "Gráfico animado de barras das minhas contribuições no GitHub por mês nos últimos seis meses.",
         "roles_alt": "Construindo APIs, arquitetura e segurança (linha animada alternando as três palavras).",
@@ -205,8 +202,7 @@ def build(lang: str) -> str:
     a('<div align="center">\n')
     a(f'<img src="assets/stats/overview.svg" alt="{s["overview_alt"]}" width="100%">\n')
     a(f'<img src="assets/stats/languages.svg" alt="{s["languages_alt"]}" width="100%">\n')
-    a(f'<a href="{PAGES}"><img src="assets/activity.svg" alt="{s["activity_alt"]}" width="100%"></a>\n')
-    a(f'<sub>{s["activity_hint"]}</sub>\n')
+    a(f'<img src="assets/activity.svg" alt="{s["activity_alt"]}" width="100%">\n')
     a(f'<details><summary>{s["months_summary"]}</summary>\n')
     a(f'<img src="assets/activity-months.svg" alt="{s["months_alt"]}" width="100%">\n')
     a("</details>\n")

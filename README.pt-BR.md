@@ -94,9 +94,7 @@ Aplicação de linha de comando que consulta o clima em tempo real pela WeatherA
 
 <img src="assets/stats/languages.svg" alt="Linguagens mais usadas nos meus repositórios públicos, por bytes de código." width="100%">
 
-<a href="https://prabovn7.github.io/Prabovn7/"><img src="assets/activity.svg" alt="Grade animada das minhas contribuições no GitHub nas últimas 26 semanas, atualizada diariamente." width="100%"></a>
-
-<sub>Toque na grade para explorar cada dia.</sub>
+<img src="assets/activity.svg" alt="Grade animada das minhas contribuições no GitHub nas últimas 26 semanas, atualizada diariamente." width="100%">
 
 <details><summary>Contribuições por mês</summary>
 

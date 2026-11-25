@@ -19,11 +19,11 @@ jobs:
       - name: Generate assets/activity.svg
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python tools/gen_activity.py --user "${{ github.repository_owner }}" --out assets/activity.svg --json docs/activity.json --months assets/activity-months.svg
+        run: python tools/gen_activity.py --user "${{ github.repository_owner }}" --out assets/activity.svg --months assets/activity-months.svg
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/activity.svg assets/activity-months.svg docs/activity.json
+          git add assets/activity.svg assets/activity-months.svg
           git diff --cached --quiet || git commit -m "chore: update activity graph"
           git push

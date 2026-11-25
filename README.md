@@ -94,9 +94,7 @@ Command-line app that fetches real-time weather data from WeatherAPI.<br><br>
 
 <img src="assets/stats/languages.svg" alt="Most used languages across my public repositories, by bytes of code." width="100%">
 
-<a href="https://prabovn7.github.io/Prabovn7/"><img src="assets/activity.svg" alt="Animated grid of my GitHub contributions over the last 26 weeks, updated daily." width="100%"></a>
-
-<sub>Tap the grid to explore each day.</sub>
+<img src="assets/activity.svg" alt="Animated grid of my GitHub contributions over the last 26 weeks, updated daily." width="100%">
 
 <details><summary>Contributions by month</summary>
 
