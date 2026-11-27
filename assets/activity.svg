@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 271" width="560" height="271" role="img" aria-label="Git activity: 186 contributions in the last 26 weeks, current streak 3 days">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 271" width="560" height="271" role="img" aria-label="Git activity: 218 contributions in the last 26 weeks, current streak 4 days">
 <title>Git activity</title>
 <defs><linearGradient id="scg" x1="0" x2="1"><stop offset="0" stop-color="#5CC8FF" stop-opacity="0"/><stop offset=".5" stop-color="#5CC8FF" stop-opacity=".35"/><stop offset="1" stop-color="#5CC8FF" stop-opacity="0"/></linearGradient></defs>
 <style>text{font-family:-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif}.t{font-size:18px;font-weight:600;fill:#E6ECF8}.s{font-size:13px;fill:#8AA4FF}.k{font-size:11px;fill:#6B7FA3}.cell{opacity:0;transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}.today{stroke:#5CC8FF;stroke-width:1.5;animation:pop .5s ease-out both,pulse 2.4s ease-in-out infinite}@keyframes pulse{0%,100%{stroke-opacity:1}50%{stroke-opacity:.15}}.flame{transform-box:fill-box;transform-origin:center bottom;animation:flicker 1.8s ease-in-out infinite}@keyframes flicker{0%,100%{transform:scale(1);opacity:1}40%{transform:scale(1.12,.94);opacity:.8}70%{transform:scale(.95,1.08);opacity:1}}.l0{fill:#1B2C52}.l1{fill:#2F6FED}.l2{fill:#8AA4FF}.l3{fill:#5CC8FF}.l4{fill:#B9D0FF}.w{animation:wave 6s ease-in-out infinite}@keyframes wave{0%,100%{opacity:1}50%{opacity:.5}}.tw{opacity:0;animation:twinkle 3.4s ease-in-out infinite}.tw{fill:#E6ECF8}@keyframes twinkle{0%,70%,100%{opacity:0}85%{opacity:.4}}.ping{fill:none;stroke:#5CC8FF;stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:ping 2.4s ease-out infinite}@keyframes ping{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.2);opacity:0}}.scan{animation:scan 5.5s ease-in-out infinite}@keyframes scan{0%{transform:translateX(0);opacity:0}12%{opacity:1}88%{opacity:1}100%{transform:translateX(var(--sw));opacity:0}}@media (prefers-reduced-motion: reduce){.cell,.today{animation:none;opacity:1}.flame{animation:none}.w,.tw,.ping,.scan{animation:none;opacity:0}.w{opacity:1}}</style>
 <rect x="0.5" y="0.5" width="559" height="270" rx="16" fill="#101E3A" stroke="#1B2C52"/>
 <g class="ico" transform="translate(24.00 22.00) scale(0.9167)"><g fill="none" stroke="#5CC8FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></g></g>
 <text class="t" x="54" y="40">Git activity</text>
-<text class="s" x="24" y="64">186 contributions in the last 26 weeks</text>
+<text class="s" x="24" y="64">218 contributions in the last 26 weeks</text>
 <g class="flame"><g class="ico" transform="translate(370.00 46.00) scale(0.7500)"><g fill="none" stroke="#8AA4FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></g></g></g>
-<text class="s" x="392" y="60">3-day streak</text>
+<text class="s" x="392" y="60">4-day streak</text>
 <text class="k" x="24" y="115">Mon</text>
 <text class="k" x="24" y="153">Wed</text>
 <text class="k" x="24" y="191">Fri</text>
@@ -108,7 +108,7 @@
 <g class="w" style="animation-delay:2.76s"><rect class="cell l0" data-level="0" data-date="2026-09-01" x="299" y="122" width="15" height="15" rx="3" style="animation-delay:0.46s"><title>2026-09-01: 0</title></rect></g>
 <g class="w" style="animation-delay:2.76s"><rect class="cell l0" data-level="0" data-date="2026-09-02" x="299" y="141" width="15" height="15" rx="3" style="animation-delay:0.46s"><title>2026-09-02: 0</title></rect></g>
 <g class="w" style="animation-delay:2.76s"><rect class="cell l0" data-level="0" data-date="2026-09-03" x="299" y="160" width="15" height="15" rx="3" style="animation-delay:0.46s"><title>2026-09-03: 0</title></rect></g>
-<g class="w" style="animation-delay:2.76s"><rect class="cell l4" data-level="4" data-date="2026-09-04" x="299" y="179" width="15" height="15" rx="3" style="animation-delay:0.46s"><title>2026-09-04: 22</title></rect></g>
+<g class="w" style="animation-delay:2.76s"><rect class="cell l3" data-level="3" data-date="2026-09-04" x="299" y="179" width="15" height="15" rx="3" style="animation-delay:0.46s"><title>2026-09-04: 22</title></rect></g>
 <rect class="tw" x="299" y="179" width="15" height="15" rx="3" style="animation-delay:0.66s"/>
 <g class="w" style="animation-delay:2.76s"><rect class="cell l0" data-level="0" data-date="2026-09-05" x="299" y="198" width="15" height="15" rx="3" style="animation-delay:0.46s"><title>2026-09-05: 0</title></rect></g>
 <g class="w" style="animation-delay:2.88s"><rect class="cell l0" data-level="0" data-date="2026-09-06" x="318" y="84" width="15" height="15" rx="3" style="animation-delay:0.49s"><title>2026-09-06: 0</title></rect></g>
@@ -154,23 +154,21 @@
 <g class="w" style="animation-delay:3.48s"><rect class="cell l0" data-level="0" data-date="2026-10-16" x="413" y="179" width="15" height="15" rx="3" style="animation-delay:0.67s"><title>2026-10-16: 0</title></rect></g>
 <g class="w" style="animation-delay:3.48s"><rect class="cell l1" data-level="1" data-date="2026-10-17" x="413" y="198" width="15" height="15" rx="3" style="animation-delay:0.67s"><title>2026-10-17: 6</title></rect></g>
 <g class="w" style="animation-delay:3.60s"><rect class="cell l2" data-level="2" data-date="2026-10-18" x="432" y="84" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-18: 14</title></rect></g>
-<g class="w" style="animation-delay:3.60s"><rect class="cell l3" data-level="3" data-date="2026-10-19" x="432" y="103" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-19: 19</title></rect></g>
-<rect class="tw" x="432" y="103" width="15" height="15" rx="3" style="animation-delay:1.13s"/>
+<g class="w" style="animation-delay:3.60s"><rect class="cell l2" data-level="2" data-date="2026-10-19" x="432" y="103" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-19: 19</title></rect></g>
 <g class="w" style="animation-delay:3.60s"><rect class="cell l1" data-level="1" data-date="2026-10-20" x="432" y="122" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-20: 2</title></rect></g>
 <g class="w" style="animation-delay:3.60s"><rect class="cell l0" data-level="0" data-date="2026-10-21" x="432" y="141" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-21: 0</title></rect></g>
 <g class="w" style="animation-delay:3.60s"><rect class="cell l0" data-level="0" data-date="2026-10-22" x="432" y="160" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-22: 0</title></rect></g>
 <g class="w" style="animation-delay:3.60s"><rect class="cell l0" data-level="0" data-date="2026-10-23" x="432" y="179" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-23: 0</title></rect></g>
 <g class="w" style="animation-delay:3.60s"><rect class="cell l1" data-level="1" data-date="2026-10-24" x="432" y="198" width="15" height="15" rx="3" style="animation-delay:0.70s"><title>2026-10-24: 1</title></rect></g>
-<g class="w" style="animation-delay:3.72s"><rect class="cell l3" data-level="3" data-date="2026-10-25" x="451" y="84" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-25: 15</title></rect></g>
-<rect class="tw" x="451" y="84" width="15" height="15" rx="3" style="animation-delay:0.97s"/>
-<g class="w" style="animation-delay:3.72s"><rect class="cell l2" data-level="2" data-date="2026-10-26" x="451" y="103" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-26: 8</title></rect></g>
+<g class="w" style="animation-delay:3.72s"><rect class="cell l2" data-level="2" data-date="2026-10-25" x="451" y="84" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-25: 15</title></rect></g>
+<g class="w" style="animation-delay:3.72s"><rect class="cell l1" data-level="1" data-date="2026-10-26" x="451" y="103" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-26: 8</title></rect></g>
 <g class="w" style="animation-delay:3.72s"><rect class="cell l1" data-level="1" data-date="2026-10-27" x="451" y="122" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-27: 4</title></rect></g>
 <g class="w" style="animation-delay:3.72s"><rect class="cell l0" data-level="0" data-date="2026-10-28" x="451" y="141" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-28: 0</title></rect></g>
 <g class="w" style="animation-delay:3.72s"><rect class="cell l0" data-level="0" data-date="2026-10-29" x="451" y="160" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-29: 0</title></rect></g>
 <g class="w" style="animation-delay:3.72s"><rect class="cell l0" data-level="0" data-date="2026-10-30" x="451" y="179" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-30: 0</title></rect></g>
 <g class="w" style="animation-delay:3.72s"><rect class="cell l0" data-level="0" data-date="2026-10-31" x="451" y="198" width="15" height="15" rx="3" style="animation-delay:0.74s"><title>2026-10-31: 0</title></rect></g>
 <g class="w" style="animation-delay:3.84s"><rect class="cell l1" data-level="1" data-date="2026-11-01" x="470" y="84" width="15" height="15" rx="3" style="animation-delay:0.77s"><title>2026-11-01: 1</title></rect></g>
-<g class="w" style="animation-delay:3.84s"><rect class="cell l4" data-level="4" data-date="2026-11-02" x="470" y="103" width="15" height="15" rx="3" style="animation-delay:0.77s"><title>2026-11-02: 28</title></rect></g>
+<g class="w" style="animation-delay:3.84s"><rect class="cell l3" data-level="3" data-date="2026-11-02" x="470" y="103" width="15" height="15" rx="3" style="animation-delay:0.77s"><title>2026-11-02: 28</title></rect></g>
 <rect class="tw" x="470" y="103" width="15" height="15" rx="3" style="animation-delay:1.87s"/>
 <g class="w" style="animation-delay:3.84s"><rect class="cell l0" data-level="0" data-date="2026-11-03" x="470" y="122" width="15" height="15" rx="3" style="animation-delay:0.77s"><title>2026-11-03: 0</title></rect></g>
 <g class="w" style="animation-delay:3.84s"><rect class="cell l0" data-level="0" data-date="2026-11-04" x="470" y="141" width="15" height="15" rx="3" style="animation-delay:0.77s"><title>2026-11-04: 0</title></rect></g>
@@ -194,11 +192,12 @@
 <g class="w" style="animation-delay:4.20s"><rect class="cell l0" data-level="0" data-date="2026-11-22" x="527" y="84" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-22: 0</title></rect></g>
 <g class="w" style="animation-delay:4.20s"><rect class="cell l0" data-level="0" data-date="2026-11-23" x="527" y="103" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-23: 0</title></rect></g>
 <g class="w" style="animation-delay:4.20s"><rect class="cell l2" data-level="2" data-date="2026-11-24" x="527" y="122" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-24: 10</title></rect></g>
-<g class="w" style="animation-delay:4.20s"><rect class="cell l4" data-level="4" data-date="2026-11-25" x="527" y="141" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-25: 27</title></rect></g>
+<g class="w" style="animation-delay:4.20s"><rect class="cell l3" data-level="3" data-date="2026-11-25" x="527" y="141" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-25: 27</title></rect></g>
 <rect class="tw" x="527" y="141" width="15" height="15" rx="3" style="animation-delay:0.64s"/>
-<g class="w" style="animation-delay:4.20s"><rect class="cell l3 today" data-level="3" data-date="2026-11-26" x="527" y="160" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-26: 15</title></rect></g>
+<g class="w" style="animation-delay:4.20s"><rect class="cell l4" data-level="4" data-date="2026-11-26" x="527" y="160" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-26: 38</title></rect></g>
 <rect class="tw" x="527" y="160" width="15" height="15" rx="3" style="animation-delay:1.17s"/>
-<rect class="ping" x="527" y="160" width="15" height="15" rx="3"/>
+<g class="w" style="animation-delay:4.20s"><rect class="cell l1 today" data-level="1" data-date="2026-11-27" x="527" y="179" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-27: 9</title></rect></g>
+<rect class="ping" x="527" y="179" width="15" height="15" rx="3"/>
 <text class="k" x="392" y="253">Less</text>
 <rect x="424" y="243" width="15" height="15" rx="3" fill="#1B2C52"/>
 <rect x="443" y="243" width="15" height="15" rx="3" fill="#2F6FED"/>
