@@ -196,8 +196,9 @@
 <rect class="tw" x="527" y="141" width="15" height="15" rx="3" style="animation-delay:0.64s"/>
 <g class="w" style="animation-delay:4.20s"><rect class="cell l4" data-level="4" data-date="2026-11-26" x="527" y="160" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-26: 38</title></rect></g>
 <rect class="tw" x="527" y="160" width="15" height="15" rx="3" style="animation-delay:1.17s"/>
-<g class="w" style="animation-delay:4.20s"><rect class="cell l1 today" data-level="1" data-date="2026-11-27" x="527" y="179" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-27: 9</title></rect></g>
-<rect class="ping" x="527" y="179" width="15" height="15" rx="3"/>
+<g class="w" style="animation-delay:4.20s"><rect class="cell l1" data-level="1" data-date="2026-11-27" x="527" y="179" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-27: 9</title></rect></g>
+<g class="w" style="animation-delay:4.20s"><rect class="cell l0 today" data-level="0" data-date="2026-11-28" x="527" y="198" width="15" height="15" rx="3" style="animation-delay:0.88s"><title>2026-11-28: 0</title></rect></g>
+<rect class="ping" x="527" y="198" width="15" height="15" rx="3"/>
 <text class="k" x="392" y="253">Less</text>
 <rect x="424" y="243" width="15" height="15" rx="3" fill="#1B2C52"/>
 <rect x="443" y="243" width="15" height="15" rx="3" fill="#2F6FED"/>
